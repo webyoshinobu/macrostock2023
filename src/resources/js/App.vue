@@ -1,28 +1,17 @@
 <template>
   <div>
-    <!-- {{ hello }} -->
     <Header />
-    <Top />
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import 'normalize.css';
-import { createApp, ref } from "vue";
-import Top from "./components/top";
-import Header from "./components/header";
+// import { createApp, ref } from "vue";
+import { defineComponent } from "vue";
+import Header from "./components/Header.vue";
 export default {
-  // setup() {
-  //     const hello = ref(
-  //         "Hello From TypeScript"
-  //     )
-
-  //     return {
-  //         hello
-  //     }
-  // },
   components: {
-    Top,
     Header,
   }
 };

@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/{any}', function () {
+    // 「index.blade.php」から拡張子を除いた「index」をviewに記載
     return view('index');
-});
+})->where('any', '.*');
