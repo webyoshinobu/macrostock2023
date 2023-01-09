@@ -60,6 +60,7 @@
         margin-right: 27px;
         display: flex;
         align-items: center;
+        font-size: 24px;
 
         &_menu {
             display: flex;
