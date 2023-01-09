@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     margin: 0 27px 20px 0;
+    font-size: 24px;
 }
 
 //共通
