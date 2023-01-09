@@ -20,7 +20,11 @@
 </template>
 
 <script lang="ts">
-
+    import { defineComponent, ref } from "vue";
+    export default defineComponent({
+    components: {
+    }
+    });
 </script>
 
 <style lang="scss" scoped>
@@ -34,11 +38,12 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
+    z-index: 999;
 
     &_logo {
         width: 170px;
         margin-left: 27px;
-        
+
         a {
             width: 100%;
             height: 100%;
