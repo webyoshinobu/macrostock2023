@@ -9,8 +9,8 @@
 
     <nav class="header_nav">
         <ul class="header_nav_menu">
-            <li class="header_nav_menu_item wd_color_white">Gallery</li>
-            <li class="header_nav_menu_item wd_color_white">Contact</li>
+            <router-link to="/gallery" class="header_nav_menu_item wd_color_white">Gallery</router-link>
+            <router-link to="/contact" class="header_nav_menu_item wd_color_white">Contact</router-link>
             <li class="header_nav_menu_item bg-white">Login</li>
             <li class="header_nav_menu_item bg-black">Register</li>
         </ul>
@@ -21,9 +21,15 @@
 
 <script lang="ts">
     import { defineComponent, ref } from "vue";
+    import { useRouter } from 'vue-router';
     export default defineComponent({
+    name: 'Header',
     components: {
-    }
+    },
+    setup() {
+      const router = useRouter();
+      return { router };
+    },
     });
 </script>
 
@@ -73,6 +79,7 @@
                 justify-content: space-between;
                 align-items: center;
                 border-radius: 20px;
+                text-decoration: none;
 
                 &:nth-child(3){
                     margin-right: 61px;

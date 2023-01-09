@@ -5,8 +5,8 @@ import gallery from "./components/gallery/Gallery.vue";
 
 const routes = [
     { path: '/', name: 'top', component: top },
-    { path: '/contact/contact', name: 'contact', component: contact },
-    { path: '/gallery/gallery', name: 'gallery', component: gallery },
+    { path: '/gallery', name: 'gallery', component: gallery },
+    { path: '/contact', name: 'contact', component: contact },
 ]
 
 const router = createRouter({

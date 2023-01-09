@@ -21839,8 +21839,16 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var vue_router_1 = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/index.js");
 exports["default"] = (0, vue_1.defineComponent)({
-  components: {}
+  name: 'Header',
+  components: {},
+  setup: function setup() {
+    var router = (0, vue_router_1.useRouter)();
+    return {
+      router: router
+    };
+  }
 });
 
 /***/ }),
@@ -22025,10 +22033,54 @@ var _withScopeId = function _withScopeId(n) {
 var _hoisted_1 = {
   "class": "header"
 };
-var _hoisted_2 = /*#__PURE__*/(0, vue_1.createStaticVNode)("<h1 class=\"header_logo\" data-v-1f42fb90><a href=\"#\" data-v-1f42fb90><img src=\"" + logo_transparent_png_1["default"] + "\" alt=\"macrostock\" data-v-1f42fb90></a></h1><nav class=\"header_nav\" data-v-1f42fb90><ul class=\"header_nav_menu\" data-v-1f42fb90><li class=\"header_nav_menu_item wd_color_white\" data-v-1f42fb90>Gallery</li><li class=\"header_nav_menu_item wd_color_white\" data-v-1f42fb90>Contact</li><li class=\"header_nav_menu_item bg-white\" data-v-1f42fb90>Login</li><li class=\"header_nav_menu_item bg-black\" data-v-1f42fb90>Register</li></ul></nav>", 2);
-var _hoisted_4 = [_hoisted_2];
+var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("h1", {
+    "class": "header_logo"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("a", {
+    href: "#"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("img", {
+    src: logo_transparent_png_1["default"],
+    alt: "macrostock"
+  })])], -1 /* HOISTED */);
+});
+
+var _hoisted_3 = {
+  "class": "header_nav"
+};
+var _hoisted_4 = {
+  "class": "header_nav_menu"
+};
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("li", {
+    "class": "header_nav_menu_item bg-white"
+  }, "Login", -1 /* HOISTED */);
+});
+
+var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("li", {
+    "class": "header_nav_menu_item bg-black"
+  }, "Register", -1 /* HOISTED */);
+});
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("header", _hoisted_1, _hoisted_4);
+  var _component_router_link = (0, vue_1.resolveComponent)("router-link");
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("header", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("nav", _hoisted_3, [(0, vue_1.createElementVNode)("ul", _hoisted_4, [(0, vue_1.createVNode)(_component_router_link, {
+    to: "/gallery",
+    "class": "header_nav_menu_item wd_color_white"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createTextVNode)("Gallery")];
+    }),
+    _: 1 /* STABLE */
+  }), (0, vue_1.createVNode)(_component_router_link, {
+    to: "/contact",
+    "class": "header_nav_menu_item wd_color_white"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createTextVNode)("Contact")];
+    }),
+    _: 1 /* STABLE */
+  }), _hoisted_5, _hoisted_6])])]);
 }
 exports.render = render;
 
@@ -22243,13 +22295,13 @@ var routes = [{
   name: 'top',
   component: Top_vue_1["default"]
 }, {
-  path: '/contact/contact',
-  name: 'contact',
-  component: Contact_vue_1["default"]
-}, {
-  path: '/gallery/gallery',
+  path: '/gallery',
   name: 'gallery',
   component: Gallery_vue_1["default"]
+}, {
+  path: '/contact',
+  name: 'contact',
+  component: Contact_vue_1["default"]
 }];
 var router = (0, vue_router_1.createRouter)({
   history: (0, vue_router_1.createWebHistory)(),
@@ -22474,7 +22526,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*[data-v-1f42fb90] {\n  padding: 0;\n  margin: 0;\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  position: fixed;\n  top: 0;\n  z-index: 999;\n}\n.header_logo[data-v-1f42fb90] {\n  width: 170px;\n  margin-left: 27px;\n}\n.header_logo a[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n}\n.header_logo a img[data-v-1f42fb90] {\n  width: 100%;\n}\n.header_nav[data-v-1f42fb90] {\n  height: 170px;\n  margin-right: 27px;\n  display: flex;\n  align-items: center;\n  font-size: 24px;\n}\n.header_nav_menu[data-v-1f42fb90] {\n  display: flex;\n  justify-content: space-between;\n  list-style-type: none;\n}\n.header_nav_menu_item[data-v-1f42fb90] {\n  padding: 22px 68px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 20px;\n}\n.header_nav_menu_item[data-v-1f42fb90]:nth-child(3) {\n  margin-right: 61px;\n}\n.bg-white[data-v-1f42fb90] {\n  background-color: #ffffff;\n  color: #000000;\n  font-weight: bold;\n}\n.bg-black[data-v-1f42fb90] {\n  background-color: #000000;\n  color: #ffffff;\n  font-weight: bold;\n}\n.wd_color_white[data-v-1f42fb90] {\n  color: #ffffff;\n  font-weight: bold;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "*[data-v-1f42fb90] {\n  padding: 0;\n  margin: 0;\n}\n.header[data-v-1f42fb90] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  position: fixed;\n  top: 0;\n  z-index: 999;\n}\n.header_logo[data-v-1f42fb90] {\n  width: 170px;\n  margin-left: 27px;\n}\n.header_logo a[data-v-1f42fb90] {\n  width: 100%;\n  height: 100%;\n}\n.header_logo a img[data-v-1f42fb90] {\n  width: 100%;\n}\n.header_nav[data-v-1f42fb90] {\n  height: 170px;\n  margin-right: 27px;\n  display: flex;\n  align-items: center;\n  font-size: 24px;\n}\n.header_nav_menu[data-v-1f42fb90] {\n  display: flex;\n  justify-content: space-between;\n  list-style-type: none;\n}\n.header_nav_menu_item[data-v-1f42fb90] {\n  padding: 22px 68px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-radius: 20px;\n  text-decoration: none;\n}\n.header_nav_menu_item[data-v-1f42fb90]:nth-child(3) {\n  margin-right: 61px;\n}\n.bg-white[data-v-1f42fb90] {\n  background-color: #ffffff;\n  color: #000000;\n  font-weight: bold;\n}\n.bg-black[data-v-1f42fb90] {\n  background-color: #000000;\n  color: #ffffff;\n  font-weight: bold;\n}\n.wd_color_white[data-v-1f42fb90] {\n  color: #ffffff;\n  font-weight: bold;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
