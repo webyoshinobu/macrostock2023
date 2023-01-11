@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/swiper-bundle.css';
 import '../css/swiper.css'; //swiper専用スタイル
+import axios from '../../plugins/axios'
 
 library.add(faInstagram);
 
@@ -16,4 +17,7 @@ const app = createApp(App);
 app.use(router, VueAwesomeSwiper);
 app.component('fa', FontAwesomeIcon );
 // app.use(VueAwesomeSwiper, /* { default options with global component } */);
+app.use(axios, {
+    baseUrl: 'https://localhost:80/',
+})
 app.mount("#app")
