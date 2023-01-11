@@ -11,8 +11,8 @@
         <ul class="header_nav_menu">
             <router-link to="/gallery" class="header_nav_menu_item wd_color_white" :class="{change_header: isChange}">Gallery</router-link>
             <router-link to="/contact" class="header_nav_menu_item wd_color_white" :class="{change_header: isChange}">Contact</router-link>
-            <li class="header_nav_menu_item button-white">Login</li>
-            <li class="header_nav_menu_item button-black">Register</li>
+            <li class="header_nav_menu_item"><ButtonWhite>Login</ButtonWhite></li>
+            <li class="header_nav_menu_item"><ButtonBlack>Register</ButtonBlack></li>
         </ul>
     </nav>
 
@@ -23,10 +23,13 @@
     import { defineComponent, ref, onMounted } from "vue";
     import { useRoute, useRouter } from 'vue-router';
     import router from '../router'
+    import ButtonWhite from "./common/ButtonWhite.vue";
+    import ButtonBlack from "./common/ButtonBlack.vue";
     export default defineComponent({
         name: 'Header',
         components: {
-
+            ButtonWhite,
+            ButtonBlack,
         },
 
         setup() {
@@ -67,10 +70,6 @@
 </script>
 
 <style lang="scss" scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
 .header {
     width: 100%;
     display: flex;
@@ -81,7 +80,7 @@
 
     &_logo {
         width: 170px;
-        margin-left: 27px;
+        margin: 0 0 0 27px;
 
         a {
             width: 100%;
@@ -107,15 +106,13 @@
             list-style-type: none;
 
             &_item {
-                padding: 22px 68px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border-radius: 20px;
                 text-decoration: none;
 
-                &:nth-child(3){
-                    margin-right: 61px;
+                &:not(:first-child) {
+                    margin-left: 50px;
                 }
             }
         }
@@ -123,19 +120,6 @@
 }
 
 //共通
-.button-white {
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: bold;
-    border: 1px solid #000000;
-}
-
-.button-black {
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: bold;
-}
-
 .wd_color_white {
     color: #ffffff;
     font-weight: bold;

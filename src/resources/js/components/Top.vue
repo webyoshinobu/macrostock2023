@@ -61,11 +61,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .top {
     width: 100%;
     height: 100vh;

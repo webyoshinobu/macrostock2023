@@ -52,11 +52,6 @@
 </script>
 
 <style lang="scss" scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .footer {
     width: 100%;
     position: fixed;
