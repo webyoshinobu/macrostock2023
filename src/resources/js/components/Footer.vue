@@ -1,6 +1,7 @@
 <template>
   <footer class="footer">
-    <fa :icon="{ prefix: 'fab', iconName: 'instagram' }" style="color:white;" class="sns_logo fa-5x" />
+    <!-- <fa :icon="{ prefix: 'fab', iconName: 'instagram' }" style="color:white;" class="sns_logo fa-5x" /> -->
+    <fa :icon="{ prefix: 'fab', iconName: 'instagram' }" class="sns_logo fa-5x" :class="{change_header: isChange}" />
     <p class="footer_admin wd_color_white" :class="{change_header: isChange}">Administrator Login</p>
   </footer>
 </template>
@@ -67,6 +68,7 @@
 
 .sns_logo {
     margin: 0 0 20px 27px;
+    color: #ffffff;
 }
 
 .footer_admin {
