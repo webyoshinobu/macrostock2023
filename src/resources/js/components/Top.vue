@@ -9,9 +9,11 @@
         <div id="top_overlay" v-show="whats_macro_photo">
             <div class="top_modal_content" id="top_modal_content">
                 <h2>マクロ写真とは？</h2>
-                <p class="top_modal_content_word">植物や虫などの小さい物をカメラの機能を使って一枚の写真に大きく写し出す写真のこと。</p>
-                <p class="top_modal_content_word">接写で被写体に近づくことで、いつもは見逃してしまうような小さい部分の輝きや面白さを表した写真を撮ることができる。</p>
-                <p class="top_modal_content_word">いわゆる接写の同義語。</p>
+                <p class="top_modal_content_word">植物や虫などの小さい物をカメラの機能を使って一枚の写真に大きく写し出す写真のことです。</p>
+                <p class="top_modal_content_word">接写で被写体に近づくことで、いつもは見逃してしまうような小さい部分の輝きや面白さを表した写真を撮ることができます。</p>
+                <p class="top_modal_content_word">いわゆる接写の同義語になります。</p>
+                <p class="top_modal_content_word">MacroStockはマクロ写真を専門にしたストックフォトサイトです。</p>
+                <p class="top_modal_content_word">ぜひ、マクロの世界を楽しんでみてください。</p>
                 <p class="top_modal_content_button">
                     <button class="top_modal_content_button_content wd_color_white" v-on:click="closeModal">close</button>
                 </p>
@@ -155,15 +157,18 @@ export default defineComponent({
   opacity: 1;
   transform: scale(1);
   transition: opacity 0.5s;
+
   .modal-content{
     transform: scale(1.2);
     transition: 0.5s;
   }
 }
+
 .modal-enter, .modal-leave-to {
   opacity: 0;
   transform: scale(0);
   transition: opacity 0.5s, transform 0s 0.5s;
+
   .modal-content{
     transform: scale(1);
   }

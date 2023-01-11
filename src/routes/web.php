@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +27,6 @@ Route::get('/{any}', function () {
     // 「index.blade.php」から拡張子を除いた「index」をviewに記載
     return view('index');
 })->where('any', '.*');
+
+Route::post('/login', LoginController::class)->name('login');
+Route::post('/logout', LogoutController::class)->name('logout');

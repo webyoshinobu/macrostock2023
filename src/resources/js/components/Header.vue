@@ -9,10 +9,10 @@
 
     <nav class="header_nav">
         <ul class="header_nav_menu">
-            <router-link to="/gallery" class="header_nav_menu_item wd_color_white">Gallery</router-link>
-            <router-link to="/contact" class="header_nav_menu_item wd_color_white">Contact</router-link>
-            <li class="header_nav_menu_item bg-white">Login</li>
-            <li class="header_nav_menu_item bg-black">Register</li>
+            <router-link to="/gallery" class="header_nav_menu_item wd_color_white" :class="{change_header: isChange}">Gallery</router-link>
+            <router-link to="/contact" class="header_nav_menu_item wd_color_white" :class="{change_header: isChange}">Contact</router-link>
+            <li class="header_nav_menu_item button-white">Login</li>
+            <li class="header_nav_menu_item button-black">Register</li>
         </ul>
     </nav>
 
@@ -20,16 +20,49 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, ref } from "vue";
-    import { useRouter } from 'vue-router';
+    import { defineComponent, ref, onMounted } from "vue";
+    import { useRoute, useRouter } from 'vue-router';
+    import router from '../router'
     export default defineComponent({
-    name: 'Header',
-    components: {
-    },
-    setup() {
-      const router = useRouter();
-      return { router };
-    },
+        name: 'Header',
+        components: {
+
+        },
+
+        setup() {
+            // data
+            const router = useRouter();
+            const route = useRoute();
+            // let isChange = false;
+            let isChange = ref(false);
+
+            // methods
+            const addClass = () => {
+                console.log('addClass()');
+                // const test = getCurrentPath();
+                // console.log('test', test);
+                router.afterEach((to) => {
+                    const current_path = to.path;
+                    console.log('現在のページ', current_path);
+                    if (current_path != '/') {
+                        console.log('トップじゃない');
+                        isChange.value = true;
+                    }else{
+                        console.log('トップ');
+                        isChange.value = false;
+                    }
+                });
+            };
+
+            // computed
+
+            // lifecycle hooks
+            onMounted(() => {
+                addClass();
+            });
+
+            return { router, addClass, isChange };
+        },
     });
 </script>
 
@@ -90,13 +123,14 @@
 }
 
 //共通
-.bg-white {
+.button-white {
     background-color: #ffffff;
     color: #000000;
     font-weight: bold;
+    border: 1px solid #000000;
 }
 
-.bg-black {
+.button-black {
     background-color: #000000;
     color: #ffffff;
     font-weight: bold;
@@ -105,6 +139,10 @@
 .wd_color_white {
     color: #ffffff;
     font-weight: bold;
+}
+
+.change_header {
+    color: #000000;
 }
 
 </style>

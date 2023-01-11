@@ -1,15 +1,52 @@
 <template>
   <footer class="footer">
     <fa :icon="{ prefix: 'fab', iconName: 'instagram' }" style="color:white;" class="sns_logo fa-5x" />
-    <p class="footer_admin wd_color_white">Administrator Login</p>
+    <p class="footer_admin wd_color_white" :class="{change_header: isChange}">Administrator Login</p>
   </footer>
 </template>
 
 <script lang="ts">
-    import { defineComponent, ref } from "vue";
+    import { defineComponent, ref, onMounted } from "vue";
+    import { useRoute, useRouter } from 'vue-router';
     export default defineComponent({
+    name: 'Footer',
     components: {
-    }
+    },
+
+    setup() {
+            // data
+            const router = useRouter();
+            const route = useRoute();
+            // let isChange = false;
+            let isChange = ref(false);
+
+            // methods
+            const addClass = () => {
+                console.log('addClass()');
+                // const test = getCurrentPath();
+                // console.log('test', test);
+                router.afterEach((to) => {
+                    const current_path = to.path;
+                    console.log('現在のページ', current_path);
+                    if (current_path != '/') {
+                        console.log('トップじゃない');
+                        isChange.value = true;
+                    }else{
+                        console.log('トップ');
+                        isChange.value = false;
+                    }
+                });
+            };
+
+            // computed
+
+            // lifecycle hooks
+            onMounted(() => {
+                addClass();
+            });
+
+            return { router, addClass, isChange };
+        },
     });
 </script>
 
@@ -55,6 +92,10 @@
 .wd_color_white {
     color: #ffffff;
     font-weight: bold;
+}
+
+.change_header {
+    color: #000000;
 }
 
 </style>

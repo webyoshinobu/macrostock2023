@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\MeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/me', MeController::class);
+});
+
+Route::post('signup', [RegisteredUserController::class, 'store'])->name('signup');
+Route::post('login', [AuthenticatedSessionController::class, 'store'])->name('login');
+
+// NOTE: 認証済みのrequestとして受信できる
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    // ログアウト処理
+    Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });
