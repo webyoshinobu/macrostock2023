@@ -50,11 +50,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .gallery {
     width: 80%;
     padding: 170px 10% 0 10%;
@@ -67,6 +62,7 @@ export default defineComponent({
     &_list {
         columns: 3;/*段組みの数*/
         padding:0 15px;/*ギャラリー左右に余白をつける*/
+        list-style-type: none;
 
         &_item{
             margin-bottom: 20px;/*各画像下に余白をつける*/
