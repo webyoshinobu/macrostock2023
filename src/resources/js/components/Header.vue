@@ -2,9 +2,9 @@
   <header class="header">
 
     <h1 class="header_logo">
-        <a href="#">
-            <img src="../../../public/images/logo_transparent.png" alt="macrostock">
-        </a>
+        <router-link to="/">
+            <img src="../../../public/images/logo_transparent.png" alt="macrostockのロゴ">
+        </router-link>
     </h1>
 
     <nav class="header_nav">
