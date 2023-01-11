@@ -24228,34 +24228,40 @@ var _withScopeId = function _withScopeId(n) {
 var _hoisted_1 = {
   "class": "header"
 };
-var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0, vue_1.createElementVNode)("h1", {
-    "class": "header_logo"
-  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("a", {
-    href: "#"
-  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("img", {
+var _hoisted_2 = {
+  "class": "header_logo"
+};
+var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("img", {
     src: logo_transparent_png_1["default"],
-    alt: "macrostock"
-  })])], -1 /* HOISTED */);
+    alt: "macrostockのロゴ"
+  }, null, -1 /* HOISTED */);
 });
 
-var _hoisted_3 = {
+var _hoisted_4 = {
   "class": "header_nav"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "header_nav_menu"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "header_nav_menu_item"
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "header_nav_menu_item"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0, vue_1.resolveComponent)("router-link");
   var _component_ButtonWhite = (0, vue_1.resolveComponent)("ButtonWhite");
   var _component_ButtonBlack = (0, vue_1.resolveComponent)("ButtonBlack");
-  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("header", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("nav", _hoisted_3, [(0, vue_1.createElementVNode)("ul", _hoisted_4, [(0, vue_1.createVNode)(_component_router_link, {
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("header", _hoisted_1, [(0, vue_1.createElementVNode)("h1", _hoisted_2, [(0, vue_1.createVNode)(_component_router_link, {
+    to: "/"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [_hoisted_3];
+    }),
+    _: 1 /* STABLE */
+  })]), (0, vue_1.createElementVNode)("nav", _hoisted_4, [(0, vue_1.createElementVNode)("ul", _hoisted_5, [(0, vue_1.createVNode)(_component_router_link, {
     to: "/gallery",
     "class": (0, vue_1.normalizeClass)(["header_nav_menu_item wd_color_white", {
       change_header: _ctx.isChange
@@ -24275,12 +24281,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0, vue_1.createTextVNode)("Contact")];
     }),
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["class"]), (0, vue_1.createElementVNode)("li", _hoisted_5, [(0, vue_1.createVNode)(_component_ButtonWhite, null, {
+  }, 8 /* PROPS */, ["class"]), (0, vue_1.createElementVNode)("li", _hoisted_6, [(0, vue_1.createVNode)(_component_ButtonWhite, null, {
     "default": (0, vue_1.withCtx)(function () {
       return [(0, vue_1.createTextVNode)("Login")];
     }),
     _: 1 /* STABLE */
-  })]), (0, vue_1.createElementVNode)("li", _hoisted_6, [(0, vue_1.createVNode)(_component_ButtonBlack, null, {
+  })]), (0, vue_1.createElementVNode)("li", _hoisted_7, [(0, vue_1.createVNode)(_component_ButtonBlack, null, {
     "default": (0, vue_1.withCtx)(function () {
       return [(0, vue_1.createTextVNode)("Register")];
     }),
