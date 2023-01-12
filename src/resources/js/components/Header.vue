@@ -60,7 +60,7 @@
             // computed
 
             // lifecycle hooks
-            onMounted(() => {
+            onMounted(() => { //これがないとページ遷移後のヘッダーのスタイルが変わらない
                 addClass();
             });
 
@@ -119,7 +119,6 @@
     }
 }
 
-//共通
 .wd_color_white {
     color: #ffffff;
     font-weight: bold;

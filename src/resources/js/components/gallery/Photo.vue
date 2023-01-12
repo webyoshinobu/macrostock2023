@@ -1,0 +1,77 @@
+<template>
+  <section class="photo">
+    <h2 class="photo_title">写真No.000000</h2>
+    <div class="photo_wrap">
+        <figure class="photo_wrap_img">
+            <img src="/images/product_imgs/dummy_img_horizontal1.jpg" alt="サンプル画像">
+        </figure>
+        <aside class="photo_wrap_aside">
+            <p class="photo_wrap_aside_word">画像サイズ：0000 × 0000px</p>
+            <p class="photo_wrap_aside_word">画像形式：JPEG</p>
+            <p class="photo_wrap_aside_word">価格：¥0000</p>
+            <p class="photo_wrap_aside_button"><ButtonOrange>カートに追加する</ButtonOrange></p>
+            <p class="photo_wrap_aside_available_usage">利用可能な用途と禁止事項について</p>
+        </aside>
+    </div>
+  </section>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from "vue";
+import ButtonOrange from "../common/ButtonOrange.vue";
+export default defineComponent({
+    name: 'Photo',
+    components: {
+        ButtonOrange,
+    },
+
+
+});
+</script>
+
+<style lang="scss" scoped>
+.photo {
+    width: 80%;
+    padding: 170px 10% 0 10%;
+
+    &_title {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+
+    &_wrap{
+        display: flex;
+        justify-content: space-between;
+
+        &_img {
+            width: 60%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_aside {
+            width: 35%;
+            padding: 0 0 0 5%;
+
+            &_word {
+                font-size: 36px;
+                font-weight: bold;
+                padding-bottom: 20px;
+            }
+
+            &_button {
+                font-size: 30px;
+            }
+
+            &_available_usage {
+                font-size: 24px;
+                padding-top: 10px;
+            }
+        }
+    }
+
+}
+
+</style>
