@@ -10,21 +10,37 @@
             <p class="photo_wrap_aside_word">画像形式：JPEG</p>
             <p class="photo_wrap_aside_word">価格：¥0000</p>
             <p class="photo_wrap_aside_button"><ButtonOrange>カートに追加する</ButtonOrange></p>
-            <p class="photo_wrap_aside_available_usage">利用可能な用途と禁止事項について</p>
+            <p ref="term" @click="termOpen" class="photo_wrap_aside_term">利用可能な用途と禁止事項について</p>
         </aside>
     </div>
+    <!-- <transition name="modal"> -->
+        <Term ref="term" />
+    <!-- </transition> -->
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import ButtonOrange from "../common/ButtonOrange.vue";
+import Term from "../term.vue";
 export default defineComponent({
     name: 'Photo',
     components: {
         ButtonOrange,
+        Term,
     },
 
+    setup() {
+        // data
+        let term = ref();
+
+        // methods
+        const termOpen = () => {
+            term.value.openModal(); //子コンポーネント(term)の呼び出し
+        }
+
+        return { term, termOpen }
+    },
 
 });
 </script>
@@ -65,9 +81,10 @@ export default defineComponent({
                 font-size: 30px;
             }
 
-            &_available_usage {
+            &_term {
                 font-size: 24px;
                 padding-top: 10px;
+                text-decoration:underline;
             }
         }
     }
