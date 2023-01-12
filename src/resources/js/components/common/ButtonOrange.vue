@@ -1,5 +1,5 @@
 <template>
-  <button class="button-black">
+  <button class="button-orange">
     <slot/>
   </button>
 </template>
@@ -17,13 +17,13 @@
 </script>
 
 <style lang="scss" scoped>
-.button-black {
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 22px 68px;
-    border: none;
-    outline: none;
-}
+    .button-orange {
+        background-color: #F87D09;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 22px 68px;
+        border: none;
+        outline: none;
+    }
 </style>

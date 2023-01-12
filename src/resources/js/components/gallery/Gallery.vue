@@ -3,7 +3,9 @@
     <h2 class="gallery_title">Gallery</h2>
     <ul class="gallery_list">
         <li v-for="image in images" :key="image.index" class="gallery_list_item">
-            <img :src="image.src" :alt="image.alt">
+            <router-link to="/gallery/photo">
+                <img :src="image.src" :alt="image.alt">
+            </router-link>
         </li>
     </ul>
   </section>
@@ -61,7 +63,6 @@ export default defineComponent({
 
     &_list {
         columns: 3;/*段組みの数*/
-        padding:0 15px;/*ギャラリー左右に余白をつける*/
         list-style-type: none;
 
         &_item{
