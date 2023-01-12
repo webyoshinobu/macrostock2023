@@ -15,7 +15,7 @@
                 <p class="top_modal_content_word">MacroStockはマクロ写真を専門にしたストックフォトサイトです。</p>
                 <p class="top_modal_content_word">ぜひ、マクロの世界を楽しんでみてください。</p>
                 <p class="top_modal_content_button">
-                    <button class="top_modal_content_button_content wd_color_white" v-on:click="closeModal">close</button>
+                    <ButtonGreen @click="closeModal">Close</ButtonGreen>
                 </p>
             </div>
         </div>
@@ -26,6 +26,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import ButtonGreen from "./common/ButtonGreen.vue";
 // import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 // import 'swiper/swiper-bundle.css';
 // import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -37,24 +38,24 @@ import 'swiper/css/pagination';
 export default defineComponent({
     name: 'Top',
     components: {
+        ButtonGreen,
         Swiper,
         // SwiperSlide,
     },
 
-    data() {
-        return {
-            whats_macro_photo: false,
+    setup() {
+        // data
+        const whats_macro_photo = ref(false);
+
+        // methods
+        const openModal = () => {
+            whats_macro_photo.value = true;
         }
-    },
+        const closeModal = () => {
+            whats_macro_photo.value = false;
+        }
 
-    methods: {
-        openModal() {
-            this.whats_macro_photo = true;
-        },
-
-        closeModal() {
-            this.whats_macro_photo = false;
-        },
+        return { whats_macro_photo, openModal, closeModal };
     }
 
 });
@@ -169,7 +170,6 @@ export default defineComponent({
   }
 }
 
-// 共通
 .wd_color_white {
     color: #ffffff;
     font-weight: bold;
