@@ -22,7 +22,6 @@
 <script lang="ts">
     import { defineComponent, ref, onMounted } from "vue";
     import { useRoute, useRouter } from 'vue-router';
-    import router from '../router'
     import ButtonWhite from "./common/ButtonWhite.vue";
     import ButtonBlack from "./common/ButtonBlack.vue";
     export default defineComponent({
@@ -36,22 +35,19 @@
             // data
             const router = useRouter();
             const route = useRoute();
-            // let isChange = false;
-            let isChange = ref(false);
+            const isChange = ref(false);
 
             // methods
             const addClass = () => {
-                console.log('addClass()');
-                // const test = getCurrentPath();
-                // console.log('test', test);
+                // console.log('addClass()');
                 router.afterEach((to) => {
                     const current_path = to.path;
-                    console.log('現在のページ', current_path);
+                    // console.log('現在のページ', current_path);
                     if (current_path != '/') {
-                        console.log('トップじゃない');
+                        // console.log('トップじゃない');
                         isChange.value = true;
                     }else{
-                        console.log('トップ');
+                        // console.log('トップ');
                         isChange.value = false;
                     }
                 });

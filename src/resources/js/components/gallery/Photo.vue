@@ -3,7 +3,8 @@
     <h2 class="photo_title">写真No.000000</h2>
     <div class="photo_wrap">
         <figure class="photo_wrap_img">
-            <img src="/images/product_imgs/dummy_img_horizontal1.jpg" alt="サンプル画像">
+            <!-- <img src="/images/product_imgs/dummy_img_horizontal1.jpg" alt="サンプル画像"> -->
+            <img :src="photo_src" :alt="photo_alt">
         </figure>
         <aside class="photo_wrap_aside">
             <p class="photo_wrap_aside_word">画像サイズ：0000 × 0000px</p>
@@ -13,16 +14,16 @@
             <p ref="term" @click="termOpen" class="photo_wrap_aside_term">利用可能な用途と禁止事項について</p>
         </aside>
     </div>
-    <!-- <transition name="modal"> -->
-        <Term ref="term" />
-    <!-- </transition> -->
+    <!-- モーダルでTermで表示 -->
+    <Term ref="term" />
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 import ButtonOrange from "../common/ButtonOrange.vue";
 import Term from "../term.vue";
+import { useRoute, useRouter } from 'vue-router';
 export default defineComponent({
     name: 'Photo',
     components: {
@@ -33,13 +34,22 @@ export default defineComponent({
     setup() {
         // data
         let term = ref();
+        const router = useRouter();
+        const route = useRoute();
+        const photo_src = route.params.src;
+        const photo_alt = route.params.alt;
 
         // methods
         const termOpen = () => {
             term.value.openModal(); //子コンポーネント(term)の呼び出し
         }
 
-        return { term, termOpen }
+        onMounted(() => {
+            console.log('photo_src', photo_src);
+            console.log('photo_alt', photo_alt);
+        })
+
+        return { term, router, route, photo_src, photo_alt, termOpen }
     },
 
 });
