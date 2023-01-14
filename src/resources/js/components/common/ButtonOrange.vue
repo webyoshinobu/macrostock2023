@@ -9,7 +9,7 @@
     import { useRoute, useRouter } from 'vue-router';
     import router from '../../router'
     export default defineComponent({
-        name: 'ButtonBlack',
+        name: 'ButtonOrange',
         components: {
 
         },

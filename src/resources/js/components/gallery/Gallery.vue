@@ -3,9 +3,7 @@
     <h2 class="gallery_title">Gallery</h2>
     <ul class="gallery_list">
         <li v-for="image in images" :key="image.index" class="gallery_list_item">
-            <router-link to="/gallery/photo">
-                <img :src="image.src" :alt="image.alt">
-            </router-link>
+            <img :src="image.src" :alt="image.alt" @click="pushImg(image)">
         </li>
     </ul>
   </section>
@@ -13,40 +11,56 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { useRouter } from 'vue-router'
 export default defineComponent({
     name: 'Gallery',
     components: {
     },
 
-    data() {
-        return {
-            images: [
-                { index: 1,
-                src: "/images/product_imgs/dummy_img_horizontal1.jpg",
-                alt: "サンプル画像"
-                },
-                { index: 2,
-                src: "/images/product_imgs/dummy_img_vertical1.jpg",
-                alt: "サンプル画像"
-                },
-                { index: 3,
-                src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-                alt: "サンプル画像"
-                },
-                { index: 1,
-                src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-                alt: "サンプル画像"
-                },
-                { index: 2,
-                src: "/images/product_imgs/dummy_img_vertical2.jpg",
-                alt: "サンプル画像"
-                },
-                { index: 3,
-                src: "/images/product_imgs/dummy_img_horizontal3.jpg",
-                alt: "サンプル画像"
-                },
-            ]
+    setup() {
+        //data
+        const router = useRouter();
+
+        const images = [
+            //srcのパスは先頭に/がないとPhoto.vueへ遷移後にうまく表示されない
+            { index: 1,
+            src: "/images/product_imgs/dummy_img_horizontal1.jpg",
+            alt: "サンプル画像"
+            },
+            { index: 2,
+            src: "/images/product_imgs/dummy_img_vertical1.jpg",
+            alt: "サンプル画像"
+            },
+            { index: 3,
+            src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+            alt: "サンプル画像"
+            },
+            { index: 1,
+            src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+            alt: "サンプル画像"
+            },
+            { index: 2,
+            src: "/images/product_imgs/dummy_img_vertical2.jpg",
+            alt: "サンプル画像"
+            },
+            { index: 3,
+            src: "/images/product_imgs/dummy_img_horizontal3.jpg",
+            alt: "サンプル画像"
+            },
+        ];
+
+        const selectImg = ref();
+
+        // methods
+        const pushImg = (image:any) => {
+            selectImg.value = image;
+            // router.push( { name:'photo', query: selectImg.value } );
+            router.push( { name:'photo', params: selectImg.value } );
+            // router.push( { path: '/gallery/photo', params: selectImg.value } );
+            // router.push( { name:'photo', params: {index:selectImg.value.index, src:selectImg.value.src, alt:selectImg.value.alt} } );
         };
+
+        return { router, images, selectImg, pushImg };
     },
 });
 </script>

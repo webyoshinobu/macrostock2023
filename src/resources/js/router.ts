@@ -1,18 +1,53 @@
-import { createRouter,createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+import { reactive } from "vue" //リアクティブメソッドを呼び出し
 import top from "./components/Top.vue";
-import contact from "./components/contact/Contact.vue";
 import gallery from "./components/gallery/Gallery.vue";
 import photo from "./components/gallery/Photo.vue";
+import contact from "./components/contact/Contact.vue";
+import cart from "./components/cart/Cart.vue";
+// const storage = gallery(); //外部ファイルに格納したデータを格納
+// const state = reactive({ //格納したオブジェクトstorageをリアクティブメソッドで値渡しにする
+// 	storage:storage
+// });
 
 const routes = [
-    { path: '/', name: 'top', component: top },
-    { path: '/gallery', name: 'gallery', component: gallery },
-    { path: '/gallery/photo', name: 'photo', component: photo },
-    { path: '/contact', name: 'contact', component: contact },
+    {
+        path: '/',
+        name: 'top',
+        component: top
+    },
+    {
+        path: '/gallery',
+        name: 'gallery',
+        component: gallery,
+        props: true
+    },
+    // {
+    //     path: '/gallery/photo',
+    //     name: 'photo',
+    //     component: photo,
+    //     props: true
+    // },
+    {
+        path: '/gallery/photo/:index?/:src?/:alt?',
+        name: 'photo',
+        component: photo,
+        props: true
+    },
+    {
+        path: '/contact',
+        name: 'contact',
+        component: contact
+    },
+    {
+        path: '/cart',
+        name: 'cart',
+        component: cart
+    },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(process.env.BASE_URL),
     routes,
 })
 

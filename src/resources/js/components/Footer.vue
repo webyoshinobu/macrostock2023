@@ -18,22 +18,15 @@
             // data
             const router = useRouter();
             const route = useRoute();
-            // let isChange = false;
-            let isChange = ref(false);
+            const isChange = ref(false);
 
             // methods
             const addClass = () => {
-                console.log('addClass()');
-                // const test = getCurrentPath();
-                // console.log('test', test);
                 router.afterEach((to) => {
                     const current_path = to.path;
-                    console.log('現在のページ', current_path);
                     if (current_path != '/') {
-                        console.log('トップじゃない');
                         isChange.value = true;
                     }else{
-                        console.log('トップ');
                         isChange.value = false;
                     }
                 });
