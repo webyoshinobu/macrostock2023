@@ -5,6 +5,7 @@ import gallery from "./components/gallery/Gallery.vue";
 import photo from "./components/gallery/Photo.vue";
 import contact from "./components/contact/Contact.vue";
 import cart from "./components/cart/Cart.vue";
+import thanks from "./components/Thanks.vue";
 // const storage = gallery(); //外部ファイルに格納したデータを格納
 // const state = reactive({ //格納したオブジェクトstorageをリアクティブメソッドで値渡しにする
 // 	storage:storage
@@ -43,6 +44,11 @@ const routes = [
         path: '/cart',
         name: 'cart',
         component: cart
+    },
+    {
+        path: '/thanks',
+        name: 'thanks',
+        component: thanks
     },
 ]
 

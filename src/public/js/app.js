@@ -23970,6 +23970,51 @@ exports["default"] = (0, vue_1.defineComponent)({
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=script&lang=ts":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=script&lang=ts ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var ButtonOrange_vue_1 = __importDefault(__webpack_require__(/*! ./common/ButtonOrange.vue */ "./resources/js/components/common/ButtonOrange.vue"));
+var ButtonBlack_vue_1 = __importDefault(__webpack_require__(/*! ./common/ButtonBlack.vue */ "./resources/js/components/common/ButtonBlack.vue"));
+var vue_router_1 = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/index.js");
+var thanks_1 = __webpack_require__(/*! ../../../store/thanks */ "./store/thanks.ts");
+exports["default"] = (0, vue_1.defineComponent)({
+  name: 'Photo',
+  components: {
+    ButtonOrange: ButtonOrange_vue_1["default"],
+    ButtonBlack: ButtonBlack_vue_1["default"]
+  },
+  setup: function setup() {
+    // data
+    var router = (0, vue_router_1.useRouter)();
+    var route = (0, vue_router_1.useRoute)();
+    var ordered_items = (0, thanks_1.thanksItems)().ordered_imgs;
+    // methods
+    (0, vue_1.onMounted)(function () {});
+    return {
+      router: router,
+      route: route,
+      ordered_items: ordered_items
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=script&lang=ts":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=script&lang=ts ***!
@@ -24042,16 +24087,64 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var cart_1 = __webpack_require__(/*! ../../../../store/cart */ "./store/cart.ts");
 var ButtonOrange_vue_1 = __importDefault(__webpack_require__(/*! ../common/ButtonOrange.vue */ "./resources/js/components/common/ButtonOrange.vue"));
+var CartLoginAside_vue_1 = __importDefault(__webpack_require__(/*! ./CartLoginAside.vue */ "./resources/js/components/cart/CartLoginAside.vue"));
 exports["default"] = (0, vue_1.defineComponent)({
   name: 'Cart',
   components: {
-    ButtonOrange: ButtonOrange_vue_1["default"]
+    ButtonOrange: ButtonOrange_vue_1["default"],
+    CartLoginAside: CartLoginAside_vue_1["default"]
   },
   setup: function setup() {
     // data
+    // const { items } = storeToRefs(cartCounter());
+    var items = (0, cart_1.cartCounter)().items;
     // methods
-    return {};
+    return {
+      items: items
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var ButtonOrange_vue_1 = __importDefault(__webpack_require__(/*! ../common/ButtonOrange.vue */ "./resources/js/components/common/ButtonOrange.vue"));
+var ButtonWhite_vue_1 = __importDefault(__webpack_require__(/*! ../common/ButtonWhite.vue */ "./resources/js/components/common/ButtonWhite.vue"));
+var vue_router_1 = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/index.js");
+exports["default"] = (0, vue_1.defineComponent)({
+  name: 'CartLoginAside',
+  components: {
+    ButtonOrange: ButtonOrange_vue_1["default"],
+    ButtonWhite: ButtonWhite_vue_1["default"]
+  },
+  setup: function setup() {
+    // data
+    var router = (0, vue_router_1.useRouter)();
+    var route = (0, vue_router_1.useRoute)();
+    // methods
+    return {
+      router: router,
+      route: route
+    };
   }
 });
 
@@ -24170,39 +24263,14 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 var vue_router_1 = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/index.js");
+var gallery_1 = __webpack_require__(/*! ../../../../store/gallery */ "./store/gallery.ts");
 exports["default"] = (0, vue_1.defineComponent)({
   name: 'Gallery',
   components: {},
   setup: function setup() {
     //data
     var router = (0, vue_router_1.useRouter)();
-    var images = [
-    //srcのパスは先頭に/がないとPhoto.vueへ遷移後にうまく表示されない
-    {
-      index: 1,
-      src: "/images/product_imgs/dummy_img_horizontal1.jpg",
-      alt: "サンプル画像"
-    }, {
-      index: 2,
-      src: "/images/product_imgs/dummy_img_vertical1.jpg",
-      alt: "サンプル画像"
-    }, {
-      index: 3,
-      src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-      alt: "サンプル画像"
-    }, {
-      index: 1,
-      src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-      alt: "サンプル画像"
-    }, {
-      index: 2,
-      src: "/images/product_imgs/dummy_img_vertical2.jpg",
-      alt: "サンプル画像"
-    }, {
-      index: 3,
-      src: "/images/product_imgs/dummy_img_horizontal3.jpg",
-      alt: "サンプル画像"
-    }];
+    var images = (0, gallery_1.galleryImgs)().product_imgs;
     var selectImg = (0, vue_1.ref)();
     // methods
     var pushImg = function pushImg(image) {
@@ -24216,11 +24284,15 @@ exports["default"] = (0, vue_1.defineComponent)({
       // router.push( { name:'photo', params: {index:selectImg.value.index, src:selectImg.value.src, alt:selectImg.value.alt} } );
     };
 
+    (0, vue_1.onMounted)(function () {
+      console.log('images', images);
+    });
     return {
       router: router,
       images: images,
       selectImg: selectImg,
-      pushImg: pushImg
+      pushImg: pushImg,
+      onMounted: vue_1.onMounted
     };
   }
 });
@@ -24245,9 +24317,12 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var pinia_1 = __webpack_require__(/*! pinia */ "./node_modules/pinia/index.js");
 var ButtonOrange_vue_1 = __importDefault(__webpack_require__(/*! ../common/ButtonOrange.vue */ "./resources/js/components/common/ButtonOrange.vue"));
 var term_vue_1 = __importDefault(__webpack_require__(/*! ../term.vue */ "./resources/js/components/term.vue"));
 var vue_router_1 = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/index.js");
+var cart_1 = __webpack_require__(/*! ../../../../store/cart */ "./store/cart.ts");
+var gallery_1 = __webpack_require__(/*! ../../../../store/gallery */ "./store/gallery.ts");
 exports["default"] = (0, vue_1.defineComponent)({
   name: 'Photo',
   components: {
@@ -24259,24 +24334,31 @@ exports["default"] = (0, vue_1.defineComponent)({
     var term = (0, vue_1.ref)();
     var router = (0, vue_router_1.useRouter)();
     var route = (0, vue_router_1.useRoute)();
-    var photo_src = route.params.src;
-    var photo_alt = route.params.alt;
+    var image = route.params;
+    var _ref = (0, pinia_1.storeToRefs)((0, gallery_1.galleryImgs)()),
+      product_imgs = _ref.product_imgs;
+    var _ref2 = (0, cart_1.cartCounter)(),
+      addCart = _ref2.addCart;
     // methods
     var termOpen = function termOpen() {
       term.value.openModal(); //子コンポーネント(term)の呼び出し
     };
 
-    (0, vue_1.onMounted)(function () {
-      console.log('photo_src', photo_src);
-      console.log('photo_alt', photo_alt);
-    });
+    var toCart = function toCart(image) {
+      addCart(image);
+      router.push({
+        name: 'cart'
+      });
+    };
+    (0, vue_1.onMounted)(function () {});
     return {
       term: term,
       router: router,
       route: route,
-      photo_src: photo_src,
-      photo_alt: photo_alt,
-      termOpen: termOpen
+      image: image,
+      termOpen: termOpen,
+      addCart: addCart,
+      toCart: toCart
     };
   }
 });
@@ -24488,6 +24570,139 @@ exports.render = render;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.render = void 0;
+var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var _withScopeId = function _withScopeId(n) {
+  return (0, vue_1.pushScopeId)("data-v-3be69874"), n = n(), (0, vue_1.popScopeId)(), n;
+};
+var _hoisted_1 = {
+  "class": "thanks"
+};
+var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("h2", {
+    "class": "thanks_title"
+  }, "ご購入ありがとうございます。", -1 /* HOISTED */);
+});
+
+var _hoisted_3 = {
+  "class": "thanks_wrap"
+};
+var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_name"
+  }, "〇〇 〇〇 様", -1 /* HOISTED */);
+});
+
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_word"
+  }, "ご購入ありがとうございます。", -1 /* HOISTED */);
+});
+
+var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_word"
+  }, "領収書をご希望の場合は、お客様ご自身で「お客様ページ」より印刷することができます。", -1 /* HOISTED */);
+});
+
+var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("h3", {
+    "class": "thanks_wrap_title"
+  }, "注文内容", -1 /* HOISTED */);
+});
+
+var _hoisted_8 = {
+  "class": "thanks_wrap_list_content"
+};
+var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_list_content_each_title f_40"
+  }, "写真No.000000", -1 /* HOISTED */);
+});
+
+var _hoisted_10 = {
+  "class": "thanks_wrap_list_content_each_selected"
+};
+var _hoisted_11 = {
+  "class": "thanks_wrap_list_content_each_selected_img"
+};
+var _hoisted_12 = ["src", "alt"];
+var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("div", {
+    "class": "thanks_wrap_list_content_each_selected_detail"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_list_content_each_selected_detail_word f_36"
+  }, "¥0000"), /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_list_content_each_selected_detail_word f_24"
+  }, "画像サイズ：0000 × 0000px"), /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "thanks_wrap_list_content_each_selected_detail_word f_24"
+  }, "画像形式：JPEG")], -1 /* HOISTED */);
+});
+
+var _hoisted_14 = {
+  "class": "thanks_button"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_ButtonBlack = (0, vue_1.resolveComponent)("ButtonBlack");
+  var _component_router_link = (0, vue_1.resolveComponent)("router-link");
+  var _component_ButtonOrange = (0, vue_1.resolveComponent)("ButtonOrange");
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("div", _hoisted_3, [_hoisted_4, _hoisted_5, _hoisted_6, _hoisted_7, (0, vue_1.createElementVNode)("ul", _hoisted_8, [((0, vue_1.openBlock)(true), (0, vue_1.createElementBlock)(vue_1.Fragment, null, (0, vue_1.renderList)(_ctx.ordered_items, function (ordered_item) {
+    return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("li", {
+      key: ordered_item,
+      "class": "thanks_wrap_list_content_each"
+    }, [_hoisted_9, (0, vue_1.createElementVNode)("div", _hoisted_10, [(0, vue_1.createElementVNode)("div", _hoisted_11, [(0, vue_1.createElementVNode)("img", {
+      src: ordered_item.src,
+      alt: ordered_item.alt
+    }, null, 8 /* PROPS */, _hoisted_12)]), _hoisted_13])]);
+  }), 128 /* KEYED_FRAGMENT */))])]), (0, vue_1.createElementVNode)("div", _hoisted_14, [(0, vue_1.createVNode)(_component_router_link, {
+    to: "/gallery"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createVNode)(_component_ButtonBlack, {
+        "class": "thanks_button_component"
+      }, {
+        "default": (0, vue_1.withCtx)(function () {
+          return [(0, vue_1.createTextVNode)("購入を続ける")];
+        }),
+        _: 1 /* STABLE */
+      })];
+    }),
+
+    _: 1 /* STABLE */
+  }), (0, vue_1.createVNode)(_component_router_link, {
+    to: "/"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createVNode)(_component_ButtonOrange, {
+        "class": "thanks_button_component"
+      }, {
+        "default": (0, vue_1.withCtx)(function () {
+          return [(0, vue_1.createTextVNode)("トップへ戻る")];
+        }),
+        _: 1 /* STABLE */
+      })];
+    }),
+
+    _: 1 /* STABLE */
+  })])]);
+}
+
+exports.render = render;
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=template&id=5c6cb28c&scoped=true&ts=true":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=template&id=5c6cb28c&scoped=true&ts=true ***!
@@ -24615,11 +24830,156 @@ var _withScopeId = function _withScopeId(n) {
 var _hoisted_1 = {
   "class": "cart"
 };
-var _hoisted_2 = /*#__PURE__*/(0, vue_1.createStaticVNode)("<h2 class=\"cart_title\" data-v-61043394>Cart</h2><div class=\"cart_wrap\" data-v-61043394><div class=\"cart_wrap_list\" data-v-61043394><div class=\"cart_wrap_list_title\" data-v-61043394>0個の素材がカートに入っています。</div></div><aside class=\"cart_wrap_aside\" data-v-61043394><div class=\"cart_wrap_aside_amount\" data-v-61043394><p class=\"cart_wrap_aside_amount_title\" data-v-61043394>合計金額：</p><p class=\"cart_wrap_aside_amount_price\" data-v-61043394><span data-v-61043394>￥</span>00000</p></div></aside></div>", 2);
-var _hoisted_4 = [_hoisted_2];
+var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("h2", {
+    "class": "cart_title"
+  }, "Cart", -1 /* HOISTED */);
+});
+
+var _hoisted_3 = {
+  "class": "cart_wrap"
+};
+var _hoisted_4 = {
+  "class": "cart_wrap_list"
+};
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("div", {
+    "class": "cart_wrap_list_title"
+  }, "0個の素材がカートに入っています。", -1 /* HOISTED */);
+});
+
+var _hoisted_6 = {
+  "class": "cart_wrap_list_content"
+};
+var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_list_content_each_title f_40"
+  }, "写真No.000000", -1 /* HOISTED */);
+});
+
+var _hoisted_8 = {
+  "class": "cart_wrap_list_content_each_selected"
+};
+var _hoisted_9 = {
+  "class": "cart_wrap_list_content_each_selected_img"
+};
+var _hoisted_10 = ["src", "alt"];
+var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("div", {
+    "class": "cart_wrap_list_content_each_selected_detail"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_list_content_each_selected_detail_word f_36"
+  }, "¥0000"), /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_list_content_each_selected_detail_word f_24"
+  }, "画像サイズ：0000 × 0000px"), /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_list_content_each_selected_detail_word f_24"
+  }, "画像形式：JPEG")], -1 /* HOISTED */);
+});
+
+var _hoisted_12 = {
+  "class": "cart_wrap_aside"
+};
+var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("div", {
+    "class": "cart_wrap_aside_amount"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_aside_amount_title"
+  }, "合計金額："), /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "cart_wrap_aside_amount_price"
+  }, [/*#__PURE__*/(0, vue_1.createElementVNode)("span", null, "￥"), /*#__PURE__*/(0, vue_1.createTextVNode)("00000")])], -1 /* HOISTED */);
+});
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, _hoisted_4);
+  var _component_CartLoginAside = (0, vue_1.resolveComponent)("CartLoginAside");
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("div", _hoisted_3, [(0, vue_1.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0, vue_1.createElementVNode)("ul", _hoisted_6, [((0, vue_1.openBlock)(true), (0, vue_1.createElementBlock)(vue_1.Fragment, null, (0, vue_1.renderList)(_ctx.items, function (item) {
+    return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("li", {
+      key: item,
+      "class": "cart_wrap_list_content_each"
+    }, [_hoisted_7, (0, vue_1.createElementVNode)("div", _hoisted_8, [(0, vue_1.createElementVNode)("div", _hoisted_9, [(0, vue_1.createElementVNode)("img", {
+      src: item.src,
+      alt: item.alt
+    }, null, 8 /* PROPS */, _hoisted_10)]), _hoisted_11])]);
+  }), 128 /* KEYED_FRAGMENT */))])]), (0, vue_1.createElementVNode)("aside", _hoisted_12, [_hoisted_13, (0, vue_1.createVNode)(_component_CartLoginAside)])])]);
 }
+exports.render = render;
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.render = void 0;
+var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var _withScopeId = function _withScopeId(n) {
+  return (0, vue_1.pushScopeId)("data-v-13ead483"), n = n(), (0, vue_1.popScopeId)(), n;
+};
+var _hoisted_1 = {
+  "class": "logined"
+};
+var _hoisted_2 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("h2", {
+    "class": "logined_title"
+  }, "購入", -1 /* HOISTED */);
+});
+
+var _hoisted_3 = {
+  "class": "logined_detail"
+};
+var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0, vue_1.createElementVNode)("p", {
+    "class": "logined_detail_word"
+  }, "「購入する」ボタンを押すと写真がダウンロードされ、購入完了画面へ遷移します。", -1 /* HOISTED */);
+});
+
+var _hoisted_5 = {
+  "class": "logined_detail_button"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_ButtonWhite = (0, vue_1.resolveComponent)("ButtonWhite");
+  var _component_router_link = (0, vue_1.resolveComponent)("router-link");
+  var _component_ButtonOrange = (0, vue_1.resolveComponent)("ButtonOrange");
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0, vue_1.createElementVNode)("div", _hoisted_5, [(0, vue_1.createVNode)(_component_router_link, {
+    to: "/gallery"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createVNode)(_component_ButtonWhite, {
+        "class": "logined_detail_button_component"
+      }, {
+        "default": (0, vue_1.withCtx)(function () {
+          return [(0, vue_1.createTextVNode)("Galleryへ")];
+        }),
+        _: 1 /* STABLE */
+      })];
+    }),
+
+    _: 1 /* STABLE */
+  }), (0, vue_1.createVNode)(_component_router_link, {
+    to: "/thanks"
+  }, {
+    "default": (0, vue_1.withCtx)(function () {
+      return [(0, vue_1.createVNode)(_component_ButtonOrange, {
+        "class": "logined_detail_button_component"
+      }, {
+        "default": (0, vue_1.withCtx)(function () {
+          return [(0, vue_1.createTextVNode)("購入する")];
+        }),
+        _: 1 /* STABLE */
+      })];
+    }),
+
+    _: 1 /* STABLE */
+  })])])]);
+}
+
 exports.render = render;
 
 /***/ }),
@@ -24867,23 +25227,27 @@ var _hoisted_10 = {
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_ButtonOrange = (0, vue_1.resolveComponent)("ButtonOrange");
   var _component_Term = (0, vue_1.resolveComponent)("Term");
-  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("div", _hoisted_3, [(0, vue_1.createElementVNode)("figure", _hoisted_4, [(0, vue_1.createCommentVNode)(" <img src=\"/images/product_imgs/dummy_img_horizontal1.jpg\" alt=\"サンプル画像\"> "), (0, vue_1.createElementVNode)("img", {
-    src: _ctx.photo_src,
-    alt: _ctx.photo_alt
-  }, null, 8 /* PROPS */, _hoisted_5)]), (0, vue_1.createElementVNode)("aside", _hoisted_6, [_hoisted_7, _hoisted_8, _hoisted_9, (0, vue_1.createElementVNode)("p", _hoisted_10, [(0, vue_1.createVNode)(_component_ButtonOrange, null, {
+  return (0, vue_1.openBlock)(), (0, vue_1.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0, vue_1.createElementVNode)("div", _hoisted_3, [(0, vue_1.createElementVNode)("figure", _hoisted_4, [(0, vue_1.createElementVNode)("img", {
+    src: _ctx.image.src,
+    alt: _ctx.image.alt
+  }, null, 8 /* PROPS */, _hoisted_5)]), (0, vue_1.createElementVNode)("aside", _hoisted_6, [_hoisted_7, _hoisted_8, _hoisted_9, (0, vue_1.createElementVNode)("p", _hoisted_10, [(0, vue_1.createVNode)(_component_ButtonOrange, {
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.toCart(_ctx.image);
+    })
+  }, {
     "default": (0, vue_1.withCtx)(function () {
       return [(0, vue_1.createTextVNode)("カートに追加する")];
     }),
     _: 1 /* STABLE */
   })]), (0, vue_1.createElementVNode)("p", {
     ref: "term",
-    onClick: _cache[0] || (_cache[0] =
+    onClick: _cache[1] || (_cache[1] =
     //@ts-ignore
     function () {
       return _ctx.termOpen && _ctx.termOpen.apply(_ctx, arguments);
     }),
     "class": "photo_wrap_aside_term"
-  }, "利用可能な用途と禁止事項について", 512 /* NEED_PATCH */)])]), (0, vue_1.createCommentVNode)(" モーダルでTermで表示 "), (0, vue_1.createVNode)(_component_Term, {
+  }, "利用可能な用途と禁止事項について", 512 /* NEED_PATCH */)]), (0, vue_1.createCommentVNode)(" <p>カウント:{{ counter.count }}</p> ")]), (0, vue_1.createCommentVNode)(" モーダルでTermで表示 "), (0, vue_1.createVNode)(_component_Term, {
     ref: "term"
   }, null, 512 /* NEED_PATCH */)]);
 }
@@ -25006,6 +25370,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 var vue_1 = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+var pinia_1 = __webpack_require__(/*! pinia */ "./node_modules/pinia/index.js");
 __webpack_require__(/*! normalize.css */ "./node_modules/normalize.css/normalize.css");
 var router_1 = __importDefault(__webpack_require__(/*! ./router */ "./resources/js/router.ts"));
 var App_vue_1 = __importDefault(__webpack_require__(/*! ./App.vue */ "./resources/js/App.vue"));
@@ -25017,13 +25382,14 @@ __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swipe
 __webpack_require__(/*! ../css/swiper.css */ "./resources/css/swiper.css"); //swiper専用スタイル
 var axios_1 = __importDefault(__webpack_require__(/*! ../../plugins/axios */ "./plugins/axios.ts"));
 fontawesome_svg_core_1.library.add(free_brands_svg_icons_1.faInstagram);
-// createApp(App).mount('#app')
 var app = (0, vue_1.createApp)(App_vue_1["default"]);
+var pinia = (0, pinia_1.createPinia)();
+app.use(pinia);
 app.use(router_1["default"], vue_awesome_swiper_1["default"]);
 app.component('fa', vue_fontawesome_1.FontAwesomeIcon);
 // app.use(VueAwesomeSwiper, /* { default options with global component } */);
 app.use(axios_1["default"], {
-  baseUrl: 'https://localhost:80/'
+  baseUrl: 'https://localhost:8000/'
 });
 app.mount("#app");
 
@@ -25053,6 +25419,7 @@ var Gallery_vue_1 = __importDefault(__webpack_require__(/*! ./components/gallery
 var Photo_vue_1 = __importDefault(__webpack_require__(/*! ./components/gallery/Photo.vue */ "./resources/js/components/gallery/Photo.vue"));
 var Contact_vue_1 = __importDefault(__webpack_require__(/*! ./components/contact/Contact.vue */ "./resources/js/components/contact/Contact.vue"));
 var Cart_vue_1 = __importDefault(__webpack_require__(/*! ./components/cart/Cart.vue */ "./resources/js/components/cart/Cart.vue"));
+var Thanks_vue_1 = __importDefault(__webpack_require__(/*! ./components/Thanks.vue */ "./resources/js/components/Thanks.vue"));
 // const storage = gallery(); //外部ファイルに格納したデータを格納
 // const state = reactive({ //格納したオブジェクトstorageをリアクティブメソッドで値渡しにする
 // 	storage:storage
@@ -25086,12 +25453,198 @@ var routes = [{
   path: '/cart',
   name: 'cart',
   component: Cart_vue_1["default"]
+}, {
+  path: '/thanks',
+  name: 'thanks',
+  component: Thanks_vue_1["default"]
 }];
 var router = (0, vue_router_1.createRouter)({
   history: (0, vue_router_1.createWebHistory)(process.env.BASE_URL),
   routes: routes
 });
 exports["default"] = router;
+
+/***/ }),
+
+/***/ "./store/cart.ts":
+/*!***********************!*\
+  !*** ./store/cart.ts ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.cartCounter = void 0;
+var pinia_1 = __webpack_require__(/*! pinia */ "./node_modules/pinia/index.js");
+exports.cartCounter = (0, pinia_1.defineStore)('cart', {
+  //保持したいデータ
+  state: function state() {
+    return {
+      items: []
+      // items: {
+      //     product_img1: {
+      //         index: 1,
+      //         src: "/images/product_imgs/dummy_img_horizontal1.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      //     product_img2: {
+      //         index: 2,
+      //         src: "/images/product_imgs/dummy_img_vertical1.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      //     product_img3: {
+      //         index: 3,
+      //         src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      //     product_img4: {
+      //         index: 4,
+      //         src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      //     product_img5: {
+      //         index: 5,
+      //         src: "/images/product_imgs/dummy_img_vertical2.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      //     product_img6: {
+      //         index: 6,
+      //         src: "/images/product_imgs/dummy_img_horizontal3.jpg",
+      //         alt: "サンプル画像"
+      //     },
+      // }
+    };
+  },
+
+  getters: {},
+  actions: {
+    addCart: function addCart(image) {
+      this.items.push(image);
+      // this.items = image;
+      console.log('action this.items', this.items);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./store/gallery.ts":
+/*!**************************!*\
+  !*** ./store/gallery.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.galleryImgs = void 0;
+var pinia_1 = __webpack_require__(/*! pinia */ "./node_modules/pinia/index.js");
+exports.galleryImgs = (0, pinia_1.defineStore)('gallery', {
+  //保持したいデータ
+  state: function state() {
+    return {
+      // product_ims: [],
+      //srcのパスは先頭に/がないとPhoto.vueへ遷移後にうまく表示されない
+      product_imgs: {
+        product_img1: {
+          index: 1,
+          src: "/images/product_imgs/dummy_img_horizontal1.jpg",
+          alt: "サンプル画像"
+        },
+        product_img2: {
+          index: 2,
+          src: "/images/product_imgs/dummy_img_vertical1.jpg",
+          alt: "サンプル画像"
+        },
+        product_img3: {
+          index: 3,
+          src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+          alt: "サンプル画像"
+        },
+        product_img4: {
+          index: 4,
+          src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+          alt: "サンプル画像"
+        },
+        product_img5: {
+          index: 5,
+          src: "/images/product_imgs/dummy_img_vertical2.jpg",
+          alt: "サンプル画像"
+        },
+        product_img6: {
+          index: 6,
+          src: "/images/product_imgs/dummy_img_horizontal3.jpg",
+          alt: "サンプル画像"
+        }
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./store/thanks.ts":
+/*!*************************!*\
+  !*** ./store/thanks.ts ***!
+  \*************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.thanksItems = void 0;
+var pinia_1 = __webpack_require__(/*! pinia */ "./node_modules/pinia/index.js");
+exports.thanksItems = (0, pinia_1.defineStore)('thanks', {
+  //保持したいデータ
+  state: function state() {
+    return {
+      // ordered_ims: [],
+      //srcのパスは先頭に/がないとPhoto.vueへ遷移後にうまく表示されない
+      ordered_imgs: {
+        ordered_img1: {
+          index: 1,
+          src: "/images/product_imgs/dummy_img_horizontal1.jpg",
+          alt: "サンプル画像"
+        },
+        ordered_img2: {
+          index: 2,
+          src: "/images/product_imgs/dummy_img_vertical1.jpg",
+          alt: "サンプル画像"
+        },
+        ordered_img3: {
+          index: 3,
+          src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+          alt: "サンプル画像"
+        },
+        ordered_img4: {
+          index: 4,
+          src: "/images/product_imgs/dummy_img_horizontal2.jpg",
+          alt: "サンプル画像"
+        },
+        ordered_img5: {
+          index: 5,
+          src: "/images/product_imgs/dummy_img_vertical2.jpg",
+          alt: "サンプル画像"
+        },
+        ordered_img6: {
+          index: 6,
+          src: "/images/product_imgs/dummy_img_horizontal3.jpg",
+          alt: "サンプル画像"
+        }
+      }
+    };
+  }
+});
 
 /***/ }),
 
@@ -25341,6 +25894,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".header[data-v-1f42fb90] {\n  width: 1
 
 /***/ }),
 
+/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/laravel-mix/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/laravel-mix/node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".thanks[data-v-3be69874] {\n  width: 80%;\n  padding: 170px 10% 0 10%;\n  margin: 0 0 100px 0;\n}\n.thanks_title[data-v-3be69874] {\n  font-size: 48px;\n}\n.thanks_wrap_name[data-v-3be69874] {\n  font-size: 36px;\n  padding: 18.5px 0 18.5px 0;\n}\n.thanks_wrap_word[data-v-3be69874] {\n  font-size: 24px;\n}\n.thanks_wrap_title[data-v-3be69874] {\n  font-size: 36px;\n  color: #ffffff;\n  background-color: #000000;\n  padding: 18.5px 0 18.5px 10px;\n  margin: 20px 0 0 0;\n}\n.thanks_wrap_list[data-v-3be69874] {\n  width: 60%;\n}\n.thanks_wrap_list_title[data-v-3be69874] {\n  background-color: #000000;\n  color: #ffffff;\n  font-size: 18px;\n  padding: 18.5px 0 18.5px 10px;\n}\n.thanks_wrap_list_content[data-v-3be69874] {\n  width: 100%;\n  list-style-type: none;\n  margin: 50px 0 0 0;\n}\n.thanks_wrap_list_content_each[data-v-3be69874] {\n  width: 100%;\n}\n.thanks_wrap_list_content_each_title[data-v-3be69874] {\n  margin: 0 0 10px 0;\n}\n.thanks_wrap_list_content_each[data-v-3be69874]:not(:last-child) {\n  padding: 0 0 10px 0;\n}\n.thanks_wrap_list_content_each_selected[data-v-3be69874] {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n}\n.thanks_wrap_list_content_each_selected_img[data-v-3be69874] {\n  width: 40%;\n}\n.thanks_wrap_list_content_each_selected_img img[data-v-3be69874] {\n  width: 100%;\n  height: auto;\n}\n.thanks_wrap_list_content_each_selected_detail[data-v-3be69874] {\n  width: 55%;\n  margin: 0 0 0 5%;\n}\n.thanks_wrap_list_content_each_selected_detail_word[data-v-3be69874] {\n  margin: 0 0 10px 0;\n}\n.thanks_button[data-v-3be69874] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 100px 0 0 0;\n}\n.thanks_button[data-v-3be69874] :last-child {\n  margin: 0 0 0 10px;\n}\n.f_40[data-v-3be69874] {\n  font-size: 40px;\n}\n.f_36[data-v-3be69874] {\n  font-size: 36px;\n}\n.f_24[data-v-3be69874] {\n  font-size: 24px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true ***!
@@ -25388,7 +25965,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cart[data-v-61043394] {\n  width: 80%;\n  padding: 170px 10% 0 10%;\n}\n.cart_title[data-v-61043394] {\n  font-size: 70px;\n  margin-bottom: 20px;\n}\n.cart_wrap[data-v-61043394] {\n  display: flex;\n  justify-content: space-between;\n}\n.cart_wrap_list[data-v-61043394] {\n  width: 60%;\n}\n.cart_wrap_list_title[data-v-61043394] {\n  background-color: #000000;\n  color: #ffffff;\n  font-size: 18px;\n  padding: 18.5px 0 18.5px 10px;\n}\n.cart_wrap_aside[data-v-61043394] {\n  width: 35%;\n  padding: 0 0 0 5%;\n}\n.cart_wrap_aside_amount[data-v-61043394] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  font-weight: bold;\n  border-bottom: 2px solid #000000;\n}\n.cart_wrap_aside_amount_title[data-v-61043394] {\n  width: 30%;\n  font-size: 24px;\n  display: flex;\n  align-items: center;\n}\n.cart_wrap_aside_amount_price[data-v-61043394] {\n  width: 70%;\n  font-size: 48px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cart[data-v-61043394] {\n  width: 80%;\n  padding: 170px 10% 0 10%;\n}\n.cart_title[data-v-61043394] {\n  font-size: 70px;\n  margin-bottom: 20px;\n}\n.cart_wrap[data-v-61043394] {\n  display: flex;\n  justify-content: space-between;\n}\n.cart_wrap_list[data-v-61043394] {\n  width: 60%;\n}\n.cart_wrap_list_title[data-v-61043394] {\n  background-color: #000000;\n  color: #ffffff;\n  font-size: 36px;\n  padding: 18.5px 0 18.5px 10px;\n}\n.cart_wrap_list_content[data-v-61043394] {\n  width: 100%;\n  list-style-type: none;\n  margin: 50px 0 0 0;\n}\n.cart_wrap_list_content_each[data-v-61043394] {\n  width: 100%;\n}\n.cart_wrap_list_content_each_title[data-v-61043394] {\n  margin: 0 0 10px 0;\n}\n.cart_wrap_list_content_each[data-v-61043394]:not(:last-child) {\n  padding: 0 0 10px 0;\n}\n.cart_wrap_list_content_each_selected[data-v-61043394] {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n}\n.cart_wrap_list_content_each_selected_img[data-v-61043394] {\n  width: 40%;\n}\n.cart_wrap_list_content_each_selected_img img[data-v-61043394] {\n  width: 100%;\n  height: auto;\n}\n.cart_wrap_list_content_each_selected_detail[data-v-61043394] {\n  width: 55%;\n  margin: 0 0 0 5%;\n}\n.cart_wrap_list_content_each_selected_detail_word[data-v-61043394] {\n  margin: 0 0 10px 0;\n}\n.cart_wrap_aside[data-v-61043394] {\n  width: 35%;\n  padding: 0 0 0 5%;\n}\n.cart_wrap_aside_amount[data-v-61043394] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  font-weight: bold;\n  border-bottom: 2px solid #000000;\n}\n.cart_wrap_aside_amount_title[data-v-61043394] {\n  width: 30%;\n  font-size: 24px;\n  display: flex;\n  align-items: center;\n}\n.cart_wrap_aside_amount_price[data-v-61043394] {\n  width: 70%;\n  font-size: 48px;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n}\n.f_40[data-v-61043394] {\n  font-size: 40px;\n}\n.f_36[data-v-61043394] {\n  font-size: 36px;\n}\n.f_24[data-v-61043394] {\n  font-size: 24px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/laravel-mix/node_modules/css-loader/dist/runtime/api.js */ "./node_modules/laravel-mix/node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".logined[data-v-13ead483] {\n  border: solid 1px #000000;\n  margin: 50px 0 0 0;\n}\n.logined_title[data-v-13ead483] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-bottom: solid 1px #000000;\n  padding: 10px 0;\n  background-color: #F2F0ED;\n}\n.logined_detail[data-v-13ead483] {\n  padding: 10px;\n}\n.logined_detail_word[data-v-13ead483] {\n  margin: 0 0 10px 0;\n  font-size: 24px;\n}\n.logined_detail_button[data-v-13ead483] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 24px;\n}\n.logined_detail_button_component[data-v-13ead483]:last-child {\n  margin: 0 0 0 10px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -25953,6 +26554,36 @@ var update = _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_in
 
 /***/ }),
 
+/***/ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/laravel-mix/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/laravel-mix/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_style_index_0_id_3be69874_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_style_index_0_id_3be69874_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_style_index_0_id_3be69874_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true ***!
@@ -26010,6 +26641,36 @@ var update = _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_in
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_style_index_0_id_61043394_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/laravel-mix/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/laravel-mix/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_style_index_0_id_13ead483_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_laravel_mix_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_style_index_0_id_13ead483_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_style_index_0_id_13ead483_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -26502,6 +27163,22 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./node_modules/pinia/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/pinia/index.js ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./dist/pinia.cjs */ "./node_modules/pinia/dist/pinia.cjs")
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -26818,6 +27495,40 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/Thanks.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Thanks.vue ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Thanks_vue_vue_type_template_id_3be69874_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true */ "./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true");
+/* harmony import */ var _Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Thanks.vue?vue&type=script&lang=ts */ "./resources/js/components/Thanks.vue?vue&type=script&lang=ts");
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+/* harmony import */ var _Thanks_vue_vue_type_style_index_0_id_3be69874_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true */ "./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true");
+/* harmony import */ var _var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,_var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Thanks_vue_vue_type_template_id_3be69874_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-3be69874"],['__file',"resources/js/components/Thanks.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/Top.vue":
 /*!*****************************************!*\
   !*** ./resources/js/components/Top.vue ***!
@@ -26878,6 +27589,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const __exports__ = /*#__PURE__*/(0,_var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Cart_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Cart_vue_vue_type_template_id_61043394_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-61043394"],['__file',"resources/js/components/cart/Cart.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/cart/CartLoginAside.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/cart/CartLoginAside.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _CartLoginAside_vue_vue_type_template_id_13ead483_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true */ "./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true");
+/* harmony import */ var _CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CartLoginAside.vue?vue&type=script&lang=ts */ "./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts");
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+/* harmony import */ var _CartLoginAside_vue_vue_type_style_index_0_id_13ead483_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true */ "./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true");
+/* harmony import */ var _var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,_var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CartLoginAside_vue_vue_type_template_id_13ead483_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-13ead483"],['__file',"resources/js/components/cart/CartLoginAside.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -27200,6 +27945,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Thanks.vue?vue&type=script&lang=ts":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Thanks.vue?vue&type=script&lang=ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport default from dynamic */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0___default.a)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!../../../node_modules/ts-loader/index.js??clonedRuleSet-7!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Thanks.vue?vue&type=script&lang=ts */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=script&lang=ts");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/Top.vue?vue&type=script&lang=ts":
 /*!*****************************************************************!*\
   !*** ./resources/js/components/Top.vue?vue&type=script&lang=ts ***!
@@ -27235,6 +28000,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
 /* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+ 
+
+/***/ }),
+
+/***/ "./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport default from dynamic */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0___default.a)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!../../../../node_modules/ts-loader/index.js??clonedRuleSet-7!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CartLoginAside.vue?vue&type=script&lang=ts */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=script&lang=ts");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_script_lang_ts__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
 /* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
  
 
@@ -27433,6 +28218,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__esModule": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_template_id_3be69874_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.__esModule),
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_template_id_3be69874_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_template_id_3be69874_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!../../../node_modules/ts-loader/index.js??clonedRuleSet-7!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=template&id=3be69874&scoped=true&ts=true");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Top.vue?vue&type=template&id=5c6cb28c&scoped=true&ts=true":
 /*!*******************************************************************************************!*\
   !*** ./resources/js/components/Top.vue?vue&type=template&id=5c6cb28c&scoped=true&ts=true ***!
@@ -27463,6 +28265,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_template_id_61043394_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_template_id_61043394_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!../../../../node_modules/ts-loader/index.js??clonedRuleSet-7!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Cart.vue?vue&type=template&id=61043394&scoped=true&ts=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/Cart.vue?vue&type=template&id=61043394&scoped=true&ts=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "__esModule": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_template_id_13ead483_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.__esModule),
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_template_id_13ead483_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_babel_loader_lib_index_js_clonedRuleSet_6_use_0_node_modules_ts_loader_index_js_clonedRuleSet_7_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_4_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_template_id_13ead483_scoped_true_ts_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!../../../../node_modules/ts-loader/index.js??clonedRuleSet-7!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/babel-loader/lib/index.js??clonedRuleSet-6.use[0]!./node_modules/ts-loader/index.js??clonedRuleSet-7!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=template&id=13ead483&scoped=true&ts=true");
 
 
 /***/ }),
@@ -27642,6 +28461,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_cjs_js_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Thanks_vue_vue_type_style_index_0_id_3be69874_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true */ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Thanks.vue?vue&type=style&index=0&id=3be69874&lang=scss&scoped=true");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true":
 /*!**************************************************************************************************!*\
   !*** ./resources/js/components/Top.vue?vue&type=style&index=0&id=5c6cb28c&lang=scss&scoped=true ***!
@@ -27664,6 +28496,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_cjs_js_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Cart_vue_vue_type_style_index_0_id_61043394_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Cart.vue?vue&type=style&index=0&id=61043394&lang=scss&scoped=true */ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/Cart.vue?vue&type=style&index=0&id=61043394&lang=scss&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_laravel_mix_node_modules_style_loader_dist_cjs_js_node_modules_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_14_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_14_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_14_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CartLoginAside_vue_vue_type_style_index_0_id_13ead483_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!../../../../node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true */ "./node_modules/laravel-mix/node_modules/style-loader/dist/cjs.js!./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-14.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-14.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-14.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/cart/CartLoginAside.vue?vue&type=style&index=0&id=13ead483&lang=scss&scoped=true");
 
 
 /***/ }),
@@ -28005,6 +28850,2063 @@ function compileToFunction(template, options) {
 (0,_vue_runtime_dom__WEBPACK_IMPORTED_MODULE_1__.registerRuntimeCompiler)(compileToFunction);
 
 
+
+
+/***/ }),
+
+/***/ "./node_modules/pinia/dist/pinia.cjs":
+/*!*******************************************!*\
+  !*** ./node_modules/pinia/dist/pinia.cjs ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+/*!
+  * pinia v2.0.29
+  * (c) 2023 Eduardo San Martin Morote
+  * @license MIT
+  */
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var vueDemi = __webpack_require__(/*! vue-demi */ "./node_modules/pinia/node_modules/vue-demi/lib/index.cjs");
+var devtoolsApi = __webpack_require__(/*! @vue/devtools-api */ "./node_modules/@vue/devtools-api/lib/esm/index.js");
+
+/**
+ * setActivePinia must be called to handle SSR at the top of functions like
+ * `fetch`, `setup`, `serverPrefetch` and others
+ */
+let activePinia;
+/**
+ * Sets or unsets the active pinia. Used in SSR and internally when calling
+ * actions and getters
+ *
+ * @param pinia - Pinia instance
+ */
+const setActivePinia = (pinia) => (activePinia = pinia);
+/**
+ * Get the currently active pinia if there is any.
+ */
+const getActivePinia = () => (vueDemi.getCurrentInstance() && vueDemi.inject(piniaSymbol)) || activePinia;
+const piniaSymbol = (( true) ? Symbol('pinia') : /* istanbul ignore next */ 0);
+
+function isPlainObject(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+o) {
+    return (o &&
+        typeof o === 'object' &&
+        Object.prototype.toString.call(o) === '[object Object]' &&
+        typeof o.toJSON !== 'function');
+}
+// type DeepReadonly<T> = { readonly [P in keyof T]: DeepReadonly<T[P]> }
+// TODO: can we change these to numbers?
+/**
+ * Possible types for SubscriptionCallback
+ */
+exports.MutationType = void 0;
+(function (MutationType) {
+    /**
+     * Direct mutation of the state:
+     *
+     * - `store.name = 'new name'`
+     * - `store.$state.name = 'new name'`
+     * - `store.list.push('new item')`
+     */
+    MutationType["direct"] = "direct";
+    /**
+     * Mutated the state with `$patch` and an object
+     *
+     * - `store.$patch({ name: 'newName' })`
+     */
+    MutationType["patchObject"] = "patch object";
+    /**
+     * Mutated the state with `$patch` and a function
+     *
+     * - `store.$patch(state => state.name = 'newName')`
+     */
+    MutationType["patchFunction"] = "patch function";
+    // maybe reset? for $state = {} and $reset
+})(exports.MutationType || (exports.MutationType = {}));
+
+const IS_CLIENT = typeof window !== 'undefined';
+/**
+ * Should we add the devtools plugins.
+ * - only if dev mode or forced through the prod devtools flag
+ * - not in test
+ * - only if window exists (could change in the future)
+ */
+const USE_DEVTOOLS =  true && IS_CLIENT;
+
+/*
+ * FileSaver.js A saveAs() FileSaver implementation.
+ *
+ * Originally by Eli Grey, adapted as an ESM module by Eduardo San Martin
+ * Morote.
+ *
+ * License : MIT
+ */
+// The one and only way of getting global scope in all environments
+// https://stackoverflow.com/q/3277182/1008999
+const _global = /*#__PURE__*/ (() => typeof window === 'object' && window.window === window
+    ? window
+    : typeof self === 'object' && self.self === self
+        ? self
+        : typeof __webpack_require__.g === 'object' && __webpack_require__.g.global === __webpack_require__.g
+            ? __webpack_require__.g
+            : typeof globalThis === 'object'
+                ? globalThis
+                : { HTMLElement: null })();
+function bom(blob, { autoBom = false } = {}) {
+    // prepend BOM for UTF-8 XML and text/* types (including HTML)
+    // note: your browser will automatically convert UTF-16 U+FEFF to EF BB BF
+    if (autoBom &&
+        /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(blob.type)) {
+        return new Blob([String.fromCharCode(0xfeff), blob], { type: blob.type });
+    }
+    return blob;
+}
+function download(url, name, opts) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.onload = function () {
+        saveAs(xhr.response, name, opts);
+    };
+    xhr.onerror = function () {
+        console.error('could not download file');
+    };
+    xhr.send();
+}
+function corsEnabled(url) {
+    const xhr = new XMLHttpRequest();
+    // use sync to avoid popup blocker
+    xhr.open('HEAD', url, false);
+    try {
+        xhr.send();
+    }
+    catch (e) { }
+    return xhr.status >= 200 && xhr.status <= 299;
+}
+// `a.click()` doesn't work for all browsers (#465)
+function click(node) {
+    try {
+        node.dispatchEvent(new MouseEvent('click'));
+    }
+    catch (e) {
+        const evt = document.createEvent('MouseEvents');
+        evt.initMouseEvent('click', true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+        node.dispatchEvent(evt);
+    }
+}
+const _navigator = 
+ typeof navigator === 'object' ? navigator : { userAgent: '' };
+// Detect WebView inside a native macOS app by ruling out all browsers
+// We just need to check for 'Safari' because all other browsers (besides Firefox) include that too
+// https://www.whatismybrowser.com/guides/the-latest-user-agent/macos
+const isMacOSWebView = /*#__PURE__*/ (() => /Macintosh/.test(_navigator.userAgent) &&
+    /AppleWebKit/.test(_navigator.userAgent) &&
+    !/Safari/.test(_navigator.userAgent))();
+const saveAs = !IS_CLIENT
+    ? () => { } // noop
+    : // Use download attribute first if possible (#193 Lumia mobile) unless this is a macOS WebView or mini program
+        typeof HTMLAnchorElement !== 'undefined' &&
+            'download' in HTMLAnchorElement.prototype &&
+            !isMacOSWebView
+            ? downloadSaveAs
+            : // Use msSaveOrOpenBlob as a second approach
+                'msSaveOrOpenBlob' in _navigator
+                    ? msSaveAs
+                    : // Fallback to using FileReader and a popup
+                        fileSaverSaveAs;
+function downloadSaveAs(blob, name = 'download', opts) {
+    const a = document.createElement('a');
+    a.download = name;
+    a.rel = 'noopener'; // tabnabbing
+    // TODO: detect chrome extensions & packaged apps
+    // a.target = '_blank'
+    if (typeof blob === 'string') {
+        // Support regular links
+        a.href = blob;
+        if (a.origin !== location.origin) {
+            if (corsEnabled(a.href)) {
+                download(blob, name, opts);
+            }
+            else {
+                a.target = '_blank';
+                click(a);
+            }
+        }
+        else {
+            click(a);
+        }
+    }
+    else {
+        // Support blobs
+        a.href = URL.createObjectURL(blob);
+        setTimeout(function () {
+            URL.revokeObjectURL(a.href);
+        }, 4e4); // 40s
+        setTimeout(function () {
+            click(a);
+        }, 0);
+    }
+}
+function msSaveAs(blob, name = 'download', opts) {
+    if (typeof blob === 'string') {
+        if (corsEnabled(blob)) {
+            download(blob, name, opts);
+        }
+        else {
+            const a = document.createElement('a');
+            a.href = blob;
+            a.target = '_blank';
+            setTimeout(function () {
+                click(a);
+            });
+        }
+    }
+    else {
+        // @ts-ignore: works on windows
+        navigator.msSaveOrOpenBlob(bom(blob, opts), name);
+    }
+}
+function fileSaverSaveAs(blob, name, opts, popup) {
+    // Open a popup immediately do go around popup blocker
+    // Mostly only available on user interaction and the fileReader is async so...
+    popup = popup || open('', '_blank');
+    if (popup) {
+        popup.document.title = popup.document.body.innerText = 'downloading...';
+    }
+    if (typeof blob === 'string')
+        return download(blob, name, opts);
+    const force = blob.type === 'application/octet-stream';
+    const isSafari = /constructor/i.test(String(_global.HTMLElement)) || 'safari' in _global;
+    const isChromeIOS = /CriOS\/[\d]+/.test(navigator.userAgent);
+    if ((isChromeIOS || (force && isSafari) || isMacOSWebView) &&
+        typeof FileReader !== 'undefined') {
+        // Safari doesn't allow downloading of blob URLs
+        const reader = new FileReader();
+        reader.onloadend = function () {
+            let url = reader.result;
+            if (typeof url !== 'string') {
+                popup = null;
+                throw new Error('Wrong reader.result type');
+            }
+            url = isChromeIOS
+                ? url
+                : url.replace(/^data:[^;]*;/, 'data:attachment/file;');
+            if (popup) {
+                popup.location.href = url;
+            }
+            else {
+                location.assign(url);
+            }
+            popup = null; // reverse-tabnabbing #460
+        };
+        reader.readAsDataURL(blob);
+    }
+    else {
+        const url = URL.createObjectURL(blob);
+        if (popup)
+            popup.location.assign(url);
+        else
+            location.href = url;
+        popup = null; // reverse-tabnabbing #460
+        setTimeout(function () {
+            URL.revokeObjectURL(url);
+        }, 4e4); // 40s
+    }
+}
+
+/**
+ * Shows a toast or console.log
+ *
+ * @param message - message to log
+ * @param type - different color of the tooltip
+ */
+function toastMessage(message, type) {
+    const piniaMessage = '🍍 ' + message;
+    if (typeof __VUE_DEVTOOLS_TOAST__ === 'function') {
+        __VUE_DEVTOOLS_TOAST__(piniaMessage, type);
+    }
+    else if (type === 'error') {
+        console.error(piniaMessage);
+    }
+    else if (type === 'warn') {
+        console.warn(piniaMessage);
+    }
+    else {
+        console.log(piniaMessage);
+    }
+}
+function isPinia(o) {
+    return '_a' in o && 'install' in o;
+}
+
+function checkClipboardAccess() {
+    if (!('clipboard' in navigator)) {
+        toastMessage(`Your browser doesn't support the Clipboard API`, 'error');
+        return true;
+    }
+}
+function checkNotFocusedError(error) {
+    if (error instanceof Error &&
+        error.message.toLowerCase().includes('document is not focused')) {
+        toastMessage('You need to activate the "Emulate a focused page" setting in the "Rendering" panel of devtools.', 'warn');
+        return true;
+    }
+    return false;
+}
+async function actionGlobalCopyState(pinia) {
+    if (checkClipboardAccess())
+        return;
+    try {
+        await navigator.clipboard.writeText(JSON.stringify(pinia.state.value));
+        toastMessage('Global state copied to clipboard.');
+    }
+    catch (error) {
+        if (checkNotFocusedError(error))
+            return;
+        toastMessage(`Failed to serialize the state. Check the console for more details.`, 'error');
+        console.error(error);
+    }
+}
+async function actionGlobalPasteState(pinia) {
+    if (checkClipboardAccess())
+        return;
+    try {
+        pinia.state.value = JSON.parse(await navigator.clipboard.readText());
+        toastMessage('Global state pasted from clipboard.');
+    }
+    catch (error) {
+        if (checkNotFocusedError(error))
+            return;
+        toastMessage(`Failed to deserialize the state from clipboard. Check the console for more details.`, 'error');
+        console.error(error);
+    }
+}
+async function actionGlobalSaveState(pinia) {
+    try {
+        saveAs(new Blob([JSON.stringify(pinia.state.value)], {
+            type: 'text/plain;charset=utf-8',
+        }), 'pinia-state.json');
+    }
+    catch (error) {
+        toastMessage(`Failed to export the state as JSON. Check the console for more details.`, 'error');
+        console.error(error);
+    }
+}
+let fileInput;
+function getFileOpener() {
+    if (!fileInput) {
+        fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = '.json';
+    }
+    function openFile() {
+        return new Promise((resolve, reject) => {
+            fileInput.onchange = async () => {
+                const files = fileInput.files;
+                if (!files)
+                    return resolve(null);
+                const file = files.item(0);
+                if (!file)
+                    return resolve(null);
+                return resolve({ text: await file.text(), file });
+            };
+            // @ts-ignore: TODO: changed from 4.3 to 4.4
+            fileInput.oncancel = () => resolve(null);
+            fileInput.onerror = reject;
+            fileInput.click();
+        });
+    }
+    return openFile;
+}
+async function actionGlobalOpenStateFile(pinia) {
+    try {
+        const open = await getFileOpener();
+        const result = await open();
+        if (!result)
+            return;
+        const { text, file } = result;
+        pinia.state.value = JSON.parse(text);
+        toastMessage(`Global state imported from "${file.name}".`);
+    }
+    catch (error) {
+        toastMessage(`Failed to export the state as JSON. Check the console for more details.`, 'error');
+        console.error(error);
+    }
+}
+
+function formatDisplay(display) {
+    return {
+        _custom: {
+            display,
+        },
+    };
+}
+const PINIA_ROOT_LABEL = '🍍 Pinia (root)';
+const PINIA_ROOT_ID = '_root';
+function formatStoreForInspectorTree(store) {
+    return isPinia(store)
+        ? {
+            id: PINIA_ROOT_ID,
+            label: PINIA_ROOT_LABEL,
+        }
+        : {
+            id: store.$id,
+            label: store.$id,
+        };
+}
+function formatStoreForInspectorState(store) {
+    if (isPinia(store)) {
+        const storeNames = Array.from(store._s.keys());
+        const storeMap = store._s;
+        const state = {
+            state: storeNames.map((storeId) => ({
+                editable: true,
+                key: storeId,
+                value: store.state.value[storeId],
+            })),
+            getters: storeNames
+                .filter((id) => storeMap.get(id)._getters)
+                .map((id) => {
+                const store = storeMap.get(id);
+                return {
+                    editable: false,
+                    key: id,
+                    value: store._getters.reduce((getters, key) => {
+                        getters[key] = store[key];
+                        return getters;
+                    }, {}),
+                };
+            }),
+        };
+        return state;
+    }
+    const state = {
+        state: Object.keys(store.$state).map((key) => ({
+            editable: true,
+            key,
+            value: store.$state[key],
+        })),
+    };
+    // avoid adding empty getters
+    if (store._getters && store._getters.length) {
+        state.getters = store._getters.map((getterName) => ({
+            editable: false,
+            key: getterName,
+            value: store[getterName],
+        }));
+    }
+    if (store._customProperties.size) {
+        state.customProperties = Array.from(store._customProperties).map((key) => ({
+            editable: true,
+            key,
+            value: store[key],
+        }));
+    }
+    return state;
+}
+function formatEventData(events) {
+    if (!events)
+        return {};
+    if (Array.isArray(events)) {
+        // TODO: handle add and delete for arrays and objects
+        return events.reduce((data, event) => {
+            data.keys.push(event.key);
+            data.operations.push(event.type);
+            data.oldValue[event.key] = event.oldValue;
+            data.newValue[event.key] = event.newValue;
+            return data;
+        }, {
+            oldValue: {},
+            keys: [],
+            operations: [],
+            newValue: {},
+        });
+    }
+    else {
+        return {
+            operation: formatDisplay(events.type),
+            key: formatDisplay(events.key),
+            oldValue: events.oldValue,
+            newValue: events.newValue,
+        };
+    }
+}
+function formatMutationType(type) {
+    switch (type) {
+        case exports.MutationType.direct:
+            return 'mutation';
+        case exports.MutationType.patchFunction:
+            return '$patch';
+        case exports.MutationType.patchObject:
+            return '$patch';
+        default:
+            return 'unknown';
+    }
+}
+
+// timeline can be paused when directly changing the state
+let isTimelineActive = true;
+const componentStateTypes = [];
+const MUTATIONS_LAYER_ID = 'pinia:mutations';
+const INSPECTOR_ID = 'pinia';
+/**
+ * Gets the displayed name of a store in devtools
+ *
+ * @param id - id of the store
+ * @returns a formatted string
+ */
+const getStoreType = (id) => '🍍 ' + id;
+/**
+ * Add the pinia plugin without any store. Allows displaying a Pinia plugin tab
+ * as soon as it is added to the application.
+ *
+ * @param app - Vue application
+ * @param pinia - pinia instance
+ */
+function registerPiniaDevtools(app, pinia) {
+    devtoolsApi.setupDevtoolsPlugin({
+        id: 'dev.esm.pinia',
+        label: 'Pinia 🍍',
+        logo: 'https://pinia.vuejs.org/logo.svg',
+        packageName: 'pinia',
+        homepage: 'https://pinia.vuejs.org',
+        componentStateTypes,
+        app,
+    }, (api) => {
+        if (typeof api.now !== 'function') {
+            toastMessage('You seem to be using an outdated version of Vue Devtools. Are you still using the Beta release instead of the stable one? You can find the links at https://devtools.vuejs.org/guide/installation.html.');
+        }
+        api.addTimelineLayer({
+            id: MUTATIONS_LAYER_ID,
+            label: `Pinia 🍍`,
+            color: 0xe5df88,
+        });
+        api.addInspector({
+            id: INSPECTOR_ID,
+            label: 'Pinia 🍍',
+            icon: 'storage',
+            treeFilterPlaceholder: 'Search stores',
+            actions: [
+                {
+                    icon: 'content_copy',
+                    action: () => {
+                        actionGlobalCopyState(pinia);
+                    },
+                    tooltip: 'Serialize and copy the state',
+                },
+                {
+                    icon: 'content_paste',
+                    action: async () => {
+                        await actionGlobalPasteState(pinia);
+                        api.sendInspectorTree(INSPECTOR_ID);
+                        api.sendInspectorState(INSPECTOR_ID);
+                    },
+                    tooltip: 'Replace the state with the content of your clipboard',
+                },
+                {
+                    icon: 'save',
+                    action: () => {
+                        actionGlobalSaveState(pinia);
+                    },
+                    tooltip: 'Save the state as a JSON file',
+                },
+                {
+                    icon: 'folder_open',
+                    action: async () => {
+                        await actionGlobalOpenStateFile(pinia);
+                        api.sendInspectorTree(INSPECTOR_ID);
+                        api.sendInspectorState(INSPECTOR_ID);
+                    },
+                    tooltip: 'Import the state from a JSON file',
+                },
+            ],
+            nodeActions: [
+                {
+                    icon: 'restore',
+                    tooltip: 'Reset the state (option store only)',
+                    action: (nodeId) => {
+                        const store = pinia._s.get(nodeId);
+                        if (!store) {
+                            toastMessage(`Cannot reset "${nodeId}" store because it wasn't found.`, 'warn');
+                        }
+                        else if (!store._isOptionsAPI) {
+                            toastMessage(`Cannot reset "${nodeId}" store because it's a setup store.`, 'warn');
+                        }
+                        else {
+                            store.$reset();
+                            toastMessage(`Store "${nodeId}" reset.`);
+                        }
+                    },
+                },
+            ],
+        });
+        api.on.inspectComponent((payload, ctx) => {
+            const proxy = (payload.componentInstance &&
+                payload.componentInstance.proxy);
+            if (proxy && proxy._pStores) {
+                const piniaStores = payload.componentInstance.proxy._pStores;
+                Object.values(piniaStores).forEach((store) => {
+                    payload.instanceData.state.push({
+                        type: getStoreType(store.$id),
+                        key: 'state',
+                        editable: true,
+                        value: store._isOptionsAPI
+                            ? {
+                                _custom: {
+                                    value: vueDemi.toRaw(store.$state),
+                                    actions: [
+                                        {
+                                            icon: 'restore',
+                                            tooltip: 'Reset the state of this store',
+                                            action: () => store.$reset(),
+                                        },
+                                    ],
+                                },
+                            }
+                            : // NOTE: workaround to unwrap transferred refs
+                                Object.keys(store.$state).reduce((state, key) => {
+                                    state[key] = store.$state[key];
+                                    return state;
+                                }, {}),
+                    });
+                    if (store._getters && store._getters.length) {
+                        payload.instanceData.state.push({
+                            type: getStoreType(store.$id),
+                            key: 'getters',
+                            editable: false,
+                            value: store._getters.reduce((getters, key) => {
+                                try {
+                                    getters[key] = store[key];
+                                }
+                                catch (error) {
+                                    // @ts-expect-error: we just want to show it in devtools
+                                    getters[key] = error;
+                                }
+                                return getters;
+                            }, {}),
+                        });
+                    }
+                });
+            }
+        });
+        api.on.getInspectorTree((payload) => {
+            if (payload.app === app && payload.inspectorId === INSPECTOR_ID) {
+                let stores = [pinia];
+                stores = stores.concat(Array.from(pinia._s.values()));
+                payload.rootNodes = (payload.filter
+                    ? stores.filter((store) => '$id' in store
+                        ? store.$id
+                            .toLowerCase()
+                            .includes(payload.filter.toLowerCase())
+                        : PINIA_ROOT_LABEL.toLowerCase().includes(payload.filter.toLowerCase()))
+                    : stores).map(formatStoreForInspectorTree);
+            }
+        });
+        api.on.getInspectorState((payload) => {
+            if (payload.app === app && payload.inspectorId === INSPECTOR_ID) {
+                const inspectedStore = payload.nodeId === PINIA_ROOT_ID
+                    ? pinia
+                    : pinia._s.get(payload.nodeId);
+                if (!inspectedStore) {
+                    // this could be the selected store restored for a different project
+                    // so it's better not to say anything here
+                    return;
+                }
+                if (inspectedStore) {
+                    payload.state = formatStoreForInspectorState(inspectedStore);
+                }
+            }
+        });
+        api.on.editInspectorState((payload, ctx) => {
+            if (payload.app === app && payload.inspectorId === INSPECTOR_ID) {
+                const inspectedStore = payload.nodeId === PINIA_ROOT_ID
+                    ? pinia
+                    : pinia._s.get(payload.nodeId);
+                if (!inspectedStore) {
+                    return toastMessage(`store "${payload.nodeId}" not found`, 'error');
+                }
+                const { path } = payload;
+                if (!isPinia(inspectedStore)) {
+                    // access only the state
+                    if (path.length !== 1 ||
+                        !inspectedStore._customProperties.has(path[0]) ||
+                        path[0] in inspectedStore.$state) {
+                        path.unshift('$state');
+                    }
+                }
+                else {
+                    // Root access, we can omit the `.value` because the devtools API does it for us
+                    path.unshift('state');
+                }
+                isTimelineActive = false;
+                payload.set(inspectedStore, path, payload.state.value);
+                isTimelineActive = true;
+            }
+        });
+        api.on.editComponentState((payload) => {
+            if (payload.type.startsWith('🍍')) {
+                const storeId = payload.type.replace(/^🍍\s*/, '');
+                const store = pinia._s.get(storeId);
+                if (!store) {
+                    return toastMessage(`store "${storeId}" not found`, 'error');
+                }
+                const { path } = payload;
+                if (path[0] !== 'state') {
+                    return toastMessage(`Invalid path for store "${storeId}":\n${path}\nOnly state can be modified.`);
+                }
+                // rewrite the first entry to be able to directly set the state as
+                // well as any other path
+                path[0] = '$state';
+                isTimelineActive = false;
+                payload.set(store, path, payload.state.value);
+                isTimelineActive = true;
+            }
+        });
+    });
+}
+function addStoreToDevtools(app, store) {
+    if (!componentStateTypes.includes(getStoreType(store.$id))) {
+        componentStateTypes.push(getStoreType(store.$id));
+    }
+    devtoolsApi.setupDevtoolsPlugin({
+        id: 'dev.esm.pinia',
+        label: 'Pinia 🍍',
+        logo: 'https://pinia.vuejs.org/logo.svg',
+        packageName: 'pinia',
+        homepage: 'https://pinia.vuejs.org',
+        componentStateTypes,
+        app,
+        settings: {
+            logStoreChanges: {
+                label: 'Notify about new/deleted stores',
+                type: 'boolean',
+                defaultValue: true,
+            },
+            // useEmojis: {
+            //   label: 'Use emojis in messages ⚡️',
+            //   type: 'boolean',
+            //   defaultValue: true,
+            // },
+        },
+    }, (api) => {
+        // gracefully handle errors
+        const now = typeof api.now === 'function' ? api.now.bind(api) : Date.now;
+        store.$onAction(({ after, onError, name, args }) => {
+            const groupId = runningActionId++;
+            api.addTimelineEvent({
+                layerId: MUTATIONS_LAYER_ID,
+                event: {
+                    time: now(),
+                    title: '🛫 ' + name,
+                    subtitle: 'start',
+                    data: {
+                        store: formatDisplay(store.$id),
+                        action: formatDisplay(name),
+                        args,
+                    },
+                    groupId,
+                },
+            });
+            after((result) => {
+                activeAction = undefined;
+                api.addTimelineEvent({
+                    layerId: MUTATIONS_LAYER_ID,
+                    event: {
+                        time: now(),
+                        title: '🛬 ' + name,
+                        subtitle: 'end',
+                        data: {
+                            store: formatDisplay(store.$id),
+                            action: formatDisplay(name),
+                            args,
+                            result,
+                        },
+                        groupId,
+                    },
+                });
+            });
+            onError((error) => {
+                activeAction = undefined;
+                api.addTimelineEvent({
+                    layerId: MUTATIONS_LAYER_ID,
+                    event: {
+                        time: now(),
+                        logType: 'error',
+                        title: '💥 ' + name,
+                        subtitle: 'end',
+                        data: {
+                            store: formatDisplay(store.$id),
+                            action: formatDisplay(name),
+                            args,
+                            error,
+                        },
+                        groupId,
+                    },
+                });
+            });
+        }, true);
+        store._customProperties.forEach((name) => {
+            vueDemi.watch(() => vueDemi.unref(store[name]), (newValue, oldValue) => {
+                api.notifyComponentUpdate();
+                api.sendInspectorState(INSPECTOR_ID);
+                if (isTimelineActive) {
+                    api.addTimelineEvent({
+                        layerId: MUTATIONS_LAYER_ID,
+                        event: {
+                            time: now(),
+                            title: 'Change',
+                            subtitle: name,
+                            data: {
+                                newValue,
+                                oldValue,
+                            },
+                            groupId: activeAction,
+                        },
+                    });
+                }
+            }, { deep: true });
+        });
+        store.$subscribe(({ events, type }, state) => {
+            api.notifyComponentUpdate();
+            api.sendInspectorState(INSPECTOR_ID);
+            if (!isTimelineActive)
+                return;
+            // rootStore.state[store.id] = state
+            const eventData = {
+                time: now(),
+                title: formatMutationType(type),
+                data: {
+                    store: formatDisplay(store.$id),
+                    ...formatEventData(events),
+                },
+                groupId: activeAction,
+            };
+            // reset for the next mutation
+            activeAction = undefined;
+            if (type === exports.MutationType.patchFunction) {
+                eventData.subtitle = '⤵️';
+            }
+            else if (type === exports.MutationType.patchObject) {
+                eventData.subtitle = '🧩';
+            }
+            else if (events && !Array.isArray(events)) {
+                eventData.subtitle = events.type;
+            }
+            if (events) {
+                eventData.data['rawEvent(s)'] = {
+                    _custom: {
+                        display: 'DebuggerEvent',
+                        type: 'object',
+                        tooltip: 'raw DebuggerEvent[]',
+                        value: events,
+                    },
+                };
+            }
+            api.addTimelineEvent({
+                layerId: MUTATIONS_LAYER_ID,
+                event: eventData,
+            });
+        }, { detached: true, flush: 'sync' });
+        const hotUpdate = store._hotUpdate;
+        store._hotUpdate = vueDemi.markRaw((newStore) => {
+            hotUpdate(newStore);
+            api.addTimelineEvent({
+                layerId: MUTATIONS_LAYER_ID,
+                event: {
+                    time: now(),
+                    title: '🔥 ' + store.$id,
+                    subtitle: 'HMR update',
+                    data: {
+                        store: formatDisplay(store.$id),
+                        info: formatDisplay(`HMR update`),
+                    },
+                },
+            });
+            // update the devtools too
+            api.notifyComponentUpdate();
+            api.sendInspectorTree(INSPECTOR_ID);
+            api.sendInspectorState(INSPECTOR_ID);
+        });
+        const { $dispose } = store;
+        store.$dispose = () => {
+            $dispose();
+            api.notifyComponentUpdate();
+            api.sendInspectorTree(INSPECTOR_ID);
+            api.sendInspectorState(INSPECTOR_ID);
+            api.getSettings().logStoreChanges &&
+                toastMessage(`Disposed "${store.$id}" store 🗑`);
+        };
+        // trigger an update so it can display new registered stores
+        api.notifyComponentUpdate();
+        api.sendInspectorTree(INSPECTOR_ID);
+        api.sendInspectorState(INSPECTOR_ID);
+        api.getSettings().logStoreChanges &&
+            toastMessage(`"${store.$id}" store installed 🆕`);
+    });
+}
+let runningActionId = 0;
+let activeAction;
+/**
+ * Patches a store to enable action grouping in devtools by wrapping the store with a Proxy that is passed as the
+ * context of all actions, allowing us to set `runningAction` on each access and effectively associating any state
+ * mutation to the action.
+ *
+ * @param store - store to patch
+ * @param actionNames - list of actionst to patch
+ */
+function patchActionForGrouping(store, actionNames) {
+    // original actions of the store as they are given by pinia. We are going to override them
+    const actions = actionNames.reduce((storeActions, actionName) => {
+        // use toRaw to avoid tracking #541
+        storeActions[actionName] = vueDemi.toRaw(store)[actionName];
+        return storeActions;
+    }, {});
+    for (const actionName in actions) {
+        store[actionName] = function () {
+            // setActivePinia(store._p)
+            // the running action id is incremented in a before action hook
+            const _actionId = runningActionId;
+            const trackedStore = new Proxy(store, {
+                get(...args) {
+                    activeAction = _actionId;
+                    return Reflect.get(...args);
+                },
+                set(...args) {
+                    activeAction = _actionId;
+                    return Reflect.set(...args);
+                },
+            });
+            return actions[actionName].apply(trackedStore, arguments);
+        };
+    }
+}
+/**
+ * pinia.use(devtoolsPlugin)
+ */
+function devtoolsPlugin({ app, store, options }) {
+    // HMR module
+    if (store.$id.startsWith('__hot:')) {
+        return;
+    }
+    // detect option api vs setup api
+    if (options.state) {
+        store._isOptionsAPI = true;
+    }
+    // only wrap actions in option-defined stores as this technique relies on
+    // wrapping the context of the action with a proxy
+    if (typeof options.state === 'function') {
+        patchActionForGrouping(
+        // @ts-expect-error: can cast the store...
+        store, Object.keys(options.actions));
+        const originalHotUpdate = store._hotUpdate;
+        // Upgrade the HMR to also update the new actions
+        vueDemi.toRaw(store)._hotUpdate = function (newStore) {
+            originalHotUpdate.apply(this, arguments);
+            patchActionForGrouping(store, Object.keys(newStore._hmrPayload.actions));
+        };
+    }
+    addStoreToDevtools(app, 
+    // FIXME: is there a way to allow the assignment from Store<Id, S, G, A> to StoreGeneric?
+    store);
+}
+
+/**
+ * Creates a Pinia instance to be used by the application
+ */
+function createPinia() {
+    const scope = vueDemi.effectScope(true);
+    // NOTE: here we could check the window object for a state and directly set it
+    // if there is anything like it with Vue 3 SSR
+    const state = scope.run(() => vueDemi.ref({}));
+    let _p = [];
+    // plugins added before calling app.use(pinia)
+    let toBeInstalled = [];
+    const pinia = vueDemi.markRaw({
+        install(app) {
+            // this allows calling useStore() outside of a component setup after
+            // installing pinia's plugin
+            setActivePinia(pinia);
+            if (!vueDemi.isVue2) {
+                pinia._a = app;
+                app.provide(piniaSymbol, pinia);
+                app.config.globalProperties.$pinia = pinia;
+                /* istanbul ignore else */
+                if (USE_DEVTOOLS) {
+                    registerPiniaDevtools(app, pinia);
+                }
+                toBeInstalled.forEach((plugin) => _p.push(plugin));
+                toBeInstalled = [];
+            }
+        },
+        use(plugin) {
+            if (!this._a && !vueDemi.isVue2) {
+                toBeInstalled.push(plugin);
+            }
+            else {
+                _p.push(plugin);
+            }
+            return this;
+        },
+        _p,
+        // it's actually undefined here
+        // @ts-expect-error
+        _a: null,
+        _e: scope,
+        _s: new Map(),
+        state,
+    });
+    // pinia devtools rely on dev only features so they cannot be forced unless
+    // the dev build of Vue is used. Avoid old browsers like IE11.
+    if (USE_DEVTOOLS && typeof Proxy !== 'undefined') {
+        pinia.use(devtoolsPlugin);
+    }
+    return pinia;
+}
+
+/**
+ * Checks if a function is a `StoreDefinition`.
+ *
+ * @param fn - object to test
+ * @returns true if `fn` is a StoreDefinition
+ */
+const isUseStore = (fn) => {
+    return typeof fn === 'function' && typeof fn.$id === 'string';
+};
+/**
+ * Mutates in place `newState` with `oldState` to _hot update_ it. It will
+ * remove any key not existing in `newState` and recursively merge plain
+ * objects.
+ *
+ * @param newState - new state object to be patched
+ * @param oldState - old state that should be used to patch newState
+ * @returns - newState
+ */
+function patchObject(newState, oldState) {
+    // no need to go through symbols because they cannot be serialized anyway
+    for (const key in oldState) {
+        const subPatch = oldState[key];
+        // skip the whole sub tree
+        if (!(key in newState)) {
+            continue;
+        }
+        const targetValue = newState[key];
+        if (isPlainObject(targetValue) &&
+            isPlainObject(subPatch) &&
+            !vueDemi.isRef(subPatch) &&
+            !vueDemi.isReactive(subPatch)) {
+            newState[key] = patchObject(targetValue, subPatch);
+        }
+        else {
+            // objects are either a bit more complex (e.g. refs) or primitives, so we
+            // just set the whole thing
+            if (vueDemi.isVue2) {
+                vueDemi.set(newState, key, subPatch);
+            }
+            else {
+                newState[key] = subPatch;
+            }
+        }
+    }
+    return newState;
+}
+/**
+ * Creates an _accept_ function to pass to `import.meta.hot` in Vite applications.
+ *
+ * @example
+ * ```js
+ * const useUser = defineStore(...)
+ * if (import.meta.hot) {
+ *   import.meta.hot.accept(acceptHMRUpdate(useUser, import.meta.hot))
+ * }
+ * ```
+ *
+ * @param initialUseStore - return of the defineStore to hot update
+ * @param hot - `import.meta.hot`
+ */
+function acceptHMRUpdate(initialUseStore, hot) {
+    // strip as much as possible from iife.prod
+    if (false) {}
+    return (newModule) => {
+        const pinia = hot.data.pinia || initialUseStore._pinia;
+        if (!pinia) {
+            // this store is still not used
+            return;
+        }
+        // preserve the pinia instance across loads
+        hot.data.pinia = pinia;
+        // console.log('got data', newStore)
+        for (const exportName in newModule) {
+            const useStore = newModule[exportName];
+            // console.log('checking for', exportName)
+            if (isUseStore(useStore) && pinia._s.has(useStore.$id)) {
+                // console.log('Accepting update for', useStore.$id)
+                const id = useStore.$id;
+                if (id !== initialUseStore.$id) {
+                    console.warn(`The id of the store changed from "${initialUseStore.$id}" to "${id}". Reloading.`);
+                    // return import.meta.hot.invalidate()
+                    return hot.invalidate();
+                }
+                const existingStore = pinia._s.get(id);
+                if (!existingStore) {
+                    console.log(`[Pinia]: skipping hmr because store doesn't exist yet`);
+                    return;
+                }
+                useStore(pinia, existingStore);
+            }
+        }
+    };
+}
+
+const noop = () => { };
+function addSubscription(subscriptions, callback, detached, onCleanup = noop) {
+    subscriptions.push(callback);
+    const removeSubscription = () => {
+        const idx = subscriptions.indexOf(callback);
+        if (idx > -1) {
+            subscriptions.splice(idx, 1);
+            onCleanup();
+        }
+    };
+    if (!detached && vueDemi.getCurrentScope()) {
+        vueDemi.onScopeDispose(removeSubscription);
+    }
+    return removeSubscription;
+}
+function triggerSubscriptions(subscriptions, ...args) {
+    subscriptions.slice().forEach((callback) => {
+        callback(...args);
+    });
+}
+
+function mergeReactiveObjects(target, patchToApply) {
+    // Handle Map instances
+    if (target instanceof Map && patchToApply instanceof Map) {
+        patchToApply.forEach((value, key) => target.set(key, value));
+    }
+    // Handle Set instances
+    if (target instanceof Set && patchToApply instanceof Set) {
+        patchToApply.forEach(target.add, target);
+    }
+    // no need to go through symbols because they cannot be serialized anyway
+    for (const key in patchToApply) {
+        if (!patchToApply.hasOwnProperty(key))
+            continue;
+        const subPatch = patchToApply[key];
+        const targetValue = target[key];
+        if (isPlainObject(targetValue) &&
+            isPlainObject(subPatch) &&
+            target.hasOwnProperty(key) &&
+            !vueDemi.isRef(subPatch) &&
+            !vueDemi.isReactive(subPatch)) {
+            // NOTE: here I wanted to warn about inconsistent types but it's not possible because in setup stores one might
+            // start the value of a property as a certain type e.g. a Map, and then for some reason, during SSR, change that
+            // to `undefined`. When trying to hydrate, we want to override the Map with `undefined`.
+            target[key] = mergeReactiveObjects(targetValue, subPatch);
+        }
+        else {
+            // @ts-expect-error: subPatch is a valid value
+            target[key] = subPatch;
+        }
+    }
+    return target;
+}
+const skipHydrateSymbol = ( true)
+    ? Symbol('pinia:skipHydration')
+    : /* istanbul ignore next */ 0;
+const skipHydrateMap = /*#__PURE__*/ new WeakMap();
+/**
+ * Tells Pinia to skip the hydration process of a given object. This is useful in setup stores (only) when you return a
+ * stateful object in the store but it isn't really state. e.g. returning a router instance in a setup store.
+ *
+ * @param obj - target object
+ * @returns obj
+ */
+function skipHydrate(obj) {
+    return vueDemi.isVue2
+        ? // in @vue/composition-api, the refs are sealed so defineProperty doesn't work...
+            /* istanbul ignore next */ skipHydrateMap.set(obj, 1) && obj
+        : Object.defineProperty(obj, skipHydrateSymbol, {});
+}
+/**
+ * Returns whether a value should be hydrated
+ *
+ * @param obj - target variable
+ * @returns true if `obj` should be hydrated
+ */
+function shouldHydrate(obj) {
+    return vueDemi.isVue2
+        ? /* istanbul ignore next */ !skipHydrateMap.has(obj)
+        : !isPlainObject(obj) || !obj.hasOwnProperty(skipHydrateSymbol);
+}
+const { assign } = Object;
+function isComputed(o) {
+    return !!(vueDemi.isRef(o) && o.effect);
+}
+function createOptionsStore(id, options, pinia, hot) {
+    const { state, actions, getters } = options;
+    const initialState = pinia.state.value[id];
+    let store;
+    function setup() {
+        if (!initialState && ( false || !hot)) {
+            /* istanbul ignore if */
+            if (vueDemi.isVue2) {
+                vueDemi.set(pinia.state.value, id, state ? state() : {});
+            }
+            else {
+                pinia.state.value[id] = state ? state() : {};
+            }
+        }
+        // avoid creating a state in pinia.state.value
+        const localState = ( true) && hot
+            ? // use ref() to unwrap refs inside state TODO: check if this is still necessary
+                vueDemi.toRefs(vueDemi.ref(state ? state() : {}).value)
+            : vueDemi.toRefs(pinia.state.value[id]);
+        return assign(localState, actions, Object.keys(getters || {}).reduce((computedGetters, name) => {
+            if (( true) && name in localState) {
+                console.warn(`[🍍]: A getter cannot have the same name as another state property. Rename one of them. Found with "${name}" in store "${id}".`);
+            }
+            computedGetters[name] = vueDemi.markRaw(vueDemi.computed(() => {
+                setActivePinia(pinia);
+                // it was created just before
+                const store = pinia._s.get(id);
+                // allow cross using stores
+                /* istanbul ignore next */
+                if (vueDemi.isVue2 && !store._r)
+                    return;
+                // @ts-expect-error
+                // return getters![name].call(context, context)
+                // TODO: avoid reading the getter while assigning with a global variable
+                return getters[name].call(store, store);
+            }));
+            return computedGetters;
+        }, {}));
+    }
+    store = createSetupStore(id, setup, options, pinia, hot, true);
+    store.$reset = function $reset() {
+        const newState = state ? state() : {};
+        // we use a patch to group all changes into one single subscription
+        this.$patch(($state) => {
+            assign($state, newState);
+        });
+    };
+    return store;
+}
+function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) {
+    let scope;
+    const optionsForPlugin = assign({ actions: {} }, options);
+    /* istanbul ignore if */
+    // @ts-expect-error: active is an internal property
+    if (( true) && !pinia._e.active) {
+        throw new Error('Pinia destroyed');
+    }
+    // watcher options for $subscribe
+    const $subscribeOptions = {
+        deep: true,
+        // flush: 'post',
+    };
+    /* istanbul ignore else */
+    if (( true) && !vueDemi.isVue2) {
+        $subscribeOptions.onTrigger = (event) => {
+            /* istanbul ignore else */
+            if (isListening) {
+                debuggerEvents = event;
+                // avoid triggering this while the store is being built and the state is being set in pinia
+            }
+            else if (isListening == false && !store._hotUpdating) {
+                // let patch send all the events together later
+                /* istanbul ignore else */
+                if (Array.isArray(debuggerEvents)) {
+                    debuggerEvents.push(event);
+                }
+                else {
+                    console.error('🍍 debuggerEvents should be an array. This is most likely an internal Pinia bug.');
+                }
+            }
+        };
+    }
+    // internal state
+    let isListening; // set to true at the end
+    let isSyncListening; // set to true at the end
+    let subscriptions = vueDemi.markRaw([]);
+    let actionSubscriptions = vueDemi.markRaw([]);
+    let debuggerEvents;
+    const initialState = pinia.state.value[$id];
+    // avoid setting the state for option stores if it is set
+    // by the setup
+    if (!isOptionsStore && !initialState && ( false || !hot)) {
+        /* istanbul ignore if */
+        if (vueDemi.isVue2) {
+            vueDemi.set(pinia.state.value, $id, {});
+        }
+        else {
+            pinia.state.value[$id] = {};
+        }
+    }
+    const hotState = vueDemi.ref({});
+    // avoid triggering too many listeners
+    // https://github.com/vuejs/pinia/issues/1129
+    let activeListener;
+    function $patch(partialStateOrMutator) {
+        let subscriptionMutation;
+        isListening = isSyncListening = false;
+        // reset the debugger events since patches are sync
+        /* istanbul ignore else */
+        if ((true)) {
+            debuggerEvents = [];
+        }
+        if (typeof partialStateOrMutator === 'function') {
+            partialStateOrMutator(pinia.state.value[$id]);
+            subscriptionMutation = {
+                type: exports.MutationType.patchFunction,
+                storeId: $id,
+                events: debuggerEvents,
+            };
+        }
+        else {
+            mergeReactiveObjects(pinia.state.value[$id], partialStateOrMutator);
+            subscriptionMutation = {
+                type: exports.MutationType.patchObject,
+                payload: partialStateOrMutator,
+                storeId: $id,
+                events: debuggerEvents,
+            };
+        }
+        const myListenerId = (activeListener = Symbol());
+        vueDemi.nextTick().then(() => {
+            if (activeListener === myListenerId) {
+                isListening = true;
+            }
+        });
+        isSyncListening = true;
+        // because we paused the watcher, we need to manually call the subscriptions
+        triggerSubscriptions(subscriptions, subscriptionMutation, pinia.state.value[$id]);
+    }
+    /* istanbul ignore next */
+    const $reset = ( true)
+        ? () => {
+            throw new Error(`🍍: Store "${$id}" is built using the setup syntax and does not implement $reset().`);
+        }
+        : 0;
+    function $dispose() {
+        scope.stop();
+        subscriptions = [];
+        actionSubscriptions = [];
+        pinia._s.delete($id);
+    }
+    /**
+     * Wraps an action to handle subscriptions.
+     *
+     * @param name - name of the action
+     * @param action - action to wrap
+     * @returns a wrapped action to handle subscriptions
+     */
+    function wrapAction(name, action) {
+        return function () {
+            setActivePinia(pinia);
+            const args = Array.from(arguments);
+            const afterCallbackList = [];
+            const onErrorCallbackList = [];
+            function after(callback) {
+                afterCallbackList.push(callback);
+            }
+            function onError(callback) {
+                onErrorCallbackList.push(callback);
+            }
+            // @ts-expect-error
+            triggerSubscriptions(actionSubscriptions, {
+                args,
+                name,
+                store,
+                after,
+                onError,
+            });
+            let ret;
+            try {
+                ret = action.apply(this && this.$id === $id ? this : store, args);
+                // handle sync errors
+            }
+            catch (error) {
+                triggerSubscriptions(onErrorCallbackList, error);
+                throw error;
+            }
+            if (ret instanceof Promise) {
+                return ret
+                    .then((value) => {
+                    triggerSubscriptions(afterCallbackList, value);
+                    return value;
+                })
+                    .catch((error) => {
+                    triggerSubscriptions(onErrorCallbackList, error);
+                    return Promise.reject(error);
+                });
+            }
+            // allow the afterCallback to override the return value
+            triggerSubscriptions(afterCallbackList, ret);
+            return ret;
+        };
+    }
+    const _hmrPayload = /*#__PURE__*/ vueDemi.markRaw({
+        actions: {},
+        getters: {},
+        state: [],
+        hotState,
+    });
+    const partialStore = {
+        _p: pinia,
+        // _s: scope,
+        $id,
+        $onAction: addSubscription.bind(null, actionSubscriptions),
+        $patch,
+        $reset,
+        $subscribe(callback, options = {}) {
+            const removeSubscription = addSubscription(subscriptions, callback, options.detached, () => stopWatcher());
+            const stopWatcher = scope.run(() => vueDemi.watch(() => pinia.state.value[$id], (state) => {
+                if (options.flush === 'sync' ? isSyncListening : isListening) {
+                    callback({
+                        storeId: $id,
+                        type: exports.MutationType.direct,
+                        events: debuggerEvents,
+                    }, state);
+                }
+            }, assign({}, $subscribeOptions, options)));
+            return removeSubscription;
+        },
+        $dispose,
+    };
+    /* istanbul ignore if */
+    if (vueDemi.isVue2) {
+        // start as non ready
+        partialStore._r = false;
+    }
+    const store = vueDemi.reactive( true
+        ? assign({
+            _hmrPayload,
+            _customProperties: vueDemi.markRaw(new Set()), // devtools custom properties
+        }, partialStore
+        // must be added later
+        // setupStore
+        )
+        : 0);
+    // store the partial store now so the setup of stores can instantiate each other before they are finished without
+    // creating infinite loops.
+    pinia._s.set($id, store);
+    // TODO: idea create skipSerialize that marks properties as non serializable and they are skipped
+    const setupStore = pinia._e.run(() => {
+        scope = vueDemi.effectScope();
+        return scope.run(() => setup());
+    });
+    // overwrite existing actions to support $onAction
+    for (const key in setupStore) {
+        const prop = setupStore[key];
+        if ((vueDemi.isRef(prop) && !isComputed(prop)) || vueDemi.isReactive(prop)) {
+            // mark it as a piece of state to be serialized
+            if (( true) && hot) {
+                vueDemi.set(hotState.value, key, vueDemi.toRef(setupStore, key));
+                // createOptionStore directly sets the state in pinia.state.value so we
+                // can just skip that
+            }
+            else if (!isOptionsStore) {
+                // in setup stores we must hydrate the state and sync pinia state tree with the refs the user just created
+                if (initialState && shouldHydrate(prop)) {
+                    if (vueDemi.isRef(prop)) {
+                        prop.value = initialState[key];
+                    }
+                    else {
+                        // probably a reactive object, lets recursively assign
+                        // @ts-expect-error: prop is unknown
+                        mergeReactiveObjects(prop, initialState[key]);
+                    }
+                }
+                // transfer the ref to the pinia state to keep everything in sync
+                /* istanbul ignore if */
+                if (vueDemi.isVue2) {
+                    vueDemi.set(pinia.state.value[$id], key, prop);
+                }
+                else {
+                    pinia.state.value[$id][key] = prop;
+                }
+            }
+            /* istanbul ignore else */
+            if ((true)) {
+                _hmrPayload.state.push(key);
+            }
+            // action
+        }
+        else if (typeof prop === 'function') {
+            // @ts-expect-error: we are overriding the function we avoid wrapping if
+            const actionValue = ( true) && hot ? prop : wrapAction(key, prop);
+            // this a hot module replacement store because the hotUpdate method needs
+            // to do it with the right context
+            /* istanbul ignore if */
+            if (vueDemi.isVue2) {
+                vueDemi.set(setupStore, key, actionValue);
+            }
+            else {
+                // @ts-expect-error
+                setupStore[key] = actionValue;
+            }
+            /* istanbul ignore else */
+            if ((true)) {
+                _hmrPayload.actions[key] = prop;
+            }
+            // list actions so they can be used in plugins
+            // @ts-expect-error
+            optionsForPlugin.actions[key] = prop;
+        }
+        else if ((true)) {
+            // add getters for devtools
+            if (isComputed(prop)) {
+                _hmrPayload.getters[key] = isOptionsStore
+                    ? // @ts-expect-error
+                        options.getters[key]
+                    : prop;
+                if (IS_CLIENT) {
+                    const getters = setupStore._getters ||
+                        // @ts-expect-error: same
+                        (setupStore._getters = vueDemi.markRaw([]));
+                    getters.push(key);
+                }
+            }
+        }
+    }
+    // add the state, getters, and action properties
+    /* istanbul ignore if */
+    if (vueDemi.isVue2) {
+        Object.keys(setupStore).forEach((key) => {
+            vueDemi.set(store, key, setupStore[key]);
+        });
+    }
+    else {
+        assign(store, setupStore);
+        // allows retrieving reactive objects with `storeToRefs()`. Must be called after assigning to the reactive object.
+        // Make `storeToRefs()` work with `reactive()` #799
+        assign(vueDemi.toRaw(store), setupStore);
+    }
+    // use this instead of a computed with setter to be able to create it anywhere
+    // without linking the computed lifespan to wherever the store is first
+    // created.
+    Object.defineProperty(store, '$state', {
+        get: () => (( true) && hot ? hotState.value : pinia.state.value[$id]),
+        set: (state) => {
+            /* istanbul ignore if */
+            if (( true) && hot) {
+                throw new Error('cannot set hotState');
+            }
+            $patch(($state) => {
+                assign($state, state);
+            });
+        },
+    });
+    // add the hotUpdate before plugins to allow them to override it
+    /* istanbul ignore else */
+    if ((true)) {
+        store._hotUpdate = vueDemi.markRaw((newStore) => {
+            store._hotUpdating = true;
+            newStore._hmrPayload.state.forEach((stateKey) => {
+                if (stateKey in store.$state) {
+                    const newStateTarget = newStore.$state[stateKey];
+                    const oldStateSource = store.$state[stateKey];
+                    if (typeof newStateTarget === 'object' &&
+                        isPlainObject(newStateTarget) &&
+                        isPlainObject(oldStateSource)) {
+                        patchObject(newStateTarget, oldStateSource);
+                    }
+                    else {
+                        // transfer the ref
+                        newStore.$state[stateKey] = oldStateSource;
+                    }
+                }
+                // patch direct access properties to allow store.stateProperty to work as
+                // store.$state.stateProperty
+                vueDemi.set(store, stateKey, vueDemi.toRef(newStore.$state, stateKey));
+            });
+            // remove deleted state properties
+            Object.keys(store.$state).forEach((stateKey) => {
+                if (!(stateKey in newStore.$state)) {
+                    vueDemi.del(store, stateKey);
+                }
+            });
+            // avoid devtools logging this as a mutation
+            isListening = false;
+            isSyncListening = false;
+            pinia.state.value[$id] = vueDemi.toRef(newStore._hmrPayload, 'hotState');
+            isSyncListening = true;
+            vueDemi.nextTick().then(() => {
+                isListening = true;
+            });
+            for (const actionName in newStore._hmrPayload.actions) {
+                const action = newStore[actionName];
+                vueDemi.set(store, actionName, wrapAction(actionName, action));
+            }
+            // TODO: does this work in both setup and option store?
+            for (const getterName in newStore._hmrPayload.getters) {
+                const getter = newStore._hmrPayload.getters[getterName];
+                const getterValue = isOptionsStore
+                    ? // special handling of options api
+                        vueDemi.computed(() => {
+                            setActivePinia(pinia);
+                            return getter.call(store, store);
+                        })
+                    : getter;
+                vueDemi.set(store, getterName, getterValue);
+            }
+            // remove deleted getters
+            Object.keys(store._hmrPayload.getters).forEach((key) => {
+                if (!(key in newStore._hmrPayload.getters)) {
+                    vueDemi.del(store, key);
+                }
+            });
+            // remove old actions
+            Object.keys(store._hmrPayload.actions).forEach((key) => {
+                if (!(key in newStore._hmrPayload.actions)) {
+                    vueDemi.del(store, key);
+                }
+            });
+            // update the values used in devtools and to allow deleting new properties later on
+            store._hmrPayload = newStore._hmrPayload;
+            store._getters = newStore._getters;
+            store._hotUpdating = false;
+        });
+    }
+    if (USE_DEVTOOLS) {
+        const nonEnumerable = {
+            writable: true,
+            configurable: true,
+            // avoid warning on devtools trying to display this property
+            enumerable: false,
+        };
+        ['_p', '_hmrPayload', '_getters', '_customProperties'].forEach((p) => {
+            Object.defineProperty(store, p, {
+                value: store[p],
+                ...nonEnumerable,
+            });
+        });
+    }
+    /* istanbul ignore if */
+    if (vueDemi.isVue2) {
+        // mark the store as ready before plugins
+        store._r = true;
+    }
+    // apply all plugins
+    pinia._p.forEach((extender) => {
+        /* istanbul ignore else */
+        if (USE_DEVTOOLS) {
+            const extensions = scope.run(() => extender({
+                store,
+                app: pinia._a,
+                pinia,
+                options: optionsForPlugin,
+            }));
+            Object.keys(extensions || {}).forEach((key) => store._customProperties.add(key));
+            assign(store, extensions);
+        }
+        else {
+            assign(store, scope.run(() => extender({
+                store,
+                app: pinia._a,
+                pinia,
+                options: optionsForPlugin,
+            })));
+        }
+    });
+    if (( true) &&
+        store.$state &&
+        typeof store.$state === 'object' &&
+        typeof store.$state.constructor === 'function' &&
+        !store.$state.constructor.toString().includes('[native code]')) {
+        console.warn(`[🍍]: The "state" must be a plain object. It cannot be\n` +
+            `\tstate: () => new MyClass()\n` +
+            `Found in store "${store.$id}".`);
+    }
+    // only apply hydrate to option stores with an initial state in pinia
+    if (initialState &&
+        isOptionsStore &&
+        options.hydrate) {
+        options.hydrate(store.$state, initialState);
+    }
+    isListening = true;
+    isSyncListening = true;
+    return store;
+}
+function defineStore(
+// TODO: add proper types from above
+idOrOptions, setup, setupOptions) {
+    let id;
+    let options;
+    const isSetupStore = typeof setup === 'function';
+    if (typeof idOrOptions === 'string') {
+        id = idOrOptions;
+        // the option store setup will contain the actual options in this case
+        options = isSetupStore ? setupOptions : setup;
+    }
+    else {
+        options = idOrOptions;
+        id = idOrOptions.id;
+    }
+    function useStore(pinia, hot) {
+        const currentInstance = vueDemi.getCurrentInstance();
+        pinia =
+            // in test mode, ignore the argument provided as we can always retrieve a
+            // pinia instance with getActivePinia()
+            ( false ? 0 : pinia) ||
+                (currentInstance && vueDemi.inject(piniaSymbol, null));
+        if (pinia)
+            setActivePinia(pinia);
+        if (( true) && !activePinia) {
+            throw new Error(`[🍍]: getActivePinia was called with no active Pinia. Did you forget to install pinia?\n` +
+                `\tconst pinia = createPinia()\n` +
+                `\tapp.use(pinia)\n` +
+                `This will fail in production.`);
+        }
+        pinia = activePinia;
+        if (!pinia._s.has(id)) {
+            // creating the store registers it in `pinia._s`
+            if (isSetupStore) {
+                createSetupStore(id, setup, options, pinia);
+            }
+            else {
+                createOptionsStore(id, options, pinia);
+            }
+            /* istanbul ignore else */
+            if ((true)) {
+                // @ts-expect-error: not the right inferred type
+                useStore._pinia = pinia;
+            }
+        }
+        const store = pinia._s.get(id);
+        if (( true) && hot) {
+            const hotId = '__hot:' + id;
+            const newStore = isSetupStore
+                ? createSetupStore(hotId, setup, options, pinia, true)
+                : createOptionsStore(hotId, assign({}, options), pinia, true);
+            hot._hotUpdate(newStore);
+            // cleanup the state properties and the store from the cache
+            delete pinia.state.value[hotId];
+            pinia._s.delete(hotId);
+        }
+        // save stores in instances to access them devtools
+        if (( true) &&
+            IS_CLIENT &&
+            currentInstance &&
+            currentInstance.proxy &&
+            // avoid adding stores that are just built for hot module replacement
+            !hot) {
+            const vm = currentInstance.proxy;
+            const cache = '_pStores' in vm ? vm._pStores : (vm._pStores = {});
+            cache[id] = store;
+        }
+        // StoreGeneric cannot be casted towards Store
+        return store;
+    }
+    useStore.$id = id;
+    return useStore;
+}
+
+let mapStoreSuffix = 'Store';
+/**
+ * Changes the suffix added by `mapStores()`. Can be set to an empty string.
+ * Defaults to `"Store"`. Make sure to extend the MapStoresCustomization
+ * interface if you are using TypeScript.
+ *
+ * @param suffix - new suffix
+ */
+function setMapStoreSuffix(suffix // could be 'Store' but that would be annoying for JS
+) {
+    mapStoreSuffix = suffix;
+}
+/**
+ * Allows using stores without the composition API (`setup()`) by generating an
+ * object to be spread in the `computed` field of a component. It accepts a list
+ * of store definitions.
+ *
+ * @example
+ * ```js
+ * export default {
+ *   computed: {
+ *     // other computed properties
+ *     ...mapStores(useUserStore, useCartStore)
+ *   },
+ *
+ *   created() {
+ *     this.userStore // store with id "user"
+ *     this.cartStore // store with id "cart"
+ *   }
+ * }
+ * ```
+ *
+ * @param stores - list of stores to map to an object
+ */
+function mapStores(...stores) {
+    if (( true) && Array.isArray(stores[0])) {
+        console.warn(`[🍍]: Directly pass all stores to "mapStores()" without putting them in an array:\n` +
+            `Replace\n` +
+            `\tmapStores([useAuthStore, useCartStore])\n` +
+            `with\n` +
+            `\tmapStores(useAuthStore, useCartStore)\n` +
+            `This will fail in production if not fixed.`);
+        stores = stores[0];
+    }
+    return stores.reduce((reduced, useStore) => {
+        // @ts-expect-error: $id is added by defineStore
+        reduced[useStore.$id + mapStoreSuffix] = function () {
+            return useStore(this.$pinia);
+        };
+        return reduced;
+    }, {});
+}
+/**
+ * Allows using state and getters from one store without using the composition
+ * API (`setup()`) by generating an object to be spread in the `computed` field
+ * of a component.
+ *
+ * @param useStore - store to map from
+ * @param keysOrMapper - array or object
+ */
+function mapState(useStore, keysOrMapper) {
+    return Array.isArray(keysOrMapper)
+        ? keysOrMapper.reduce((reduced, key) => {
+            reduced[key] = function () {
+                return useStore(this.$pinia)[key];
+            };
+            return reduced;
+        }, {})
+        : Object.keys(keysOrMapper).reduce((reduced, key) => {
+            // @ts-expect-error
+            reduced[key] = function () {
+                const store = useStore(this.$pinia);
+                const storeKey = keysOrMapper[key];
+                // for some reason TS is unable to infer the type of storeKey to be a
+                // function
+                return typeof storeKey === 'function'
+                    ? storeKey.call(this, store)
+                    : store[storeKey];
+            };
+            return reduced;
+        }, {});
+}
+/**
+ * Alias for `mapState()`. You should use `mapState()` instead.
+ * @deprecated use `mapState()` instead.
+ */
+const mapGetters = mapState;
+/**
+ * Allows directly using actions from your store without using the composition
+ * API (`setup()`) by generating an object to be spread in the `methods` field
+ * of a component.
+ *
+ * @param useStore - store to map from
+ * @param keysOrMapper - array or object
+ */
+function mapActions(useStore, keysOrMapper) {
+    return Array.isArray(keysOrMapper)
+        ? keysOrMapper.reduce((reduced, key) => {
+            // @ts-expect-error
+            reduced[key] = function (...args) {
+                return useStore(this.$pinia)[key](...args);
+            };
+            return reduced;
+        }, {})
+        : Object.keys(keysOrMapper).reduce((reduced, key) => {
+            // @ts-expect-error
+            reduced[key] = function (...args) {
+                return useStore(this.$pinia)[keysOrMapper[key]](...args);
+            };
+            return reduced;
+        }, {});
+}
+/**
+ * Allows using state and getters from one store without using the composition
+ * API (`setup()`) by generating an object to be spread in the `computed` field
+ * of a component.
+ *
+ * @param useStore - store to map from
+ * @param keysOrMapper - array or object
+ */
+function mapWritableState(useStore, keysOrMapper) {
+    return Array.isArray(keysOrMapper)
+        ? keysOrMapper.reduce((reduced, key) => {
+            // @ts-ignore
+            reduced[key] = {
+                get() {
+                    return useStore(this.$pinia)[key];
+                },
+                set(value) {
+                    // it's easier to type it here as any
+                    return (useStore(this.$pinia)[key] = value);
+                },
+            };
+            return reduced;
+        }, {})
+        : Object.keys(keysOrMapper).reduce((reduced, key) => {
+            // @ts-ignore
+            reduced[key] = {
+                get() {
+                    return useStore(this.$pinia)[keysOrMapper[key]];
+                },
+                set(value) {
+                    // it's easier to type it here as any
+                    return (useStore(this.$pinia)[keysOrMapper[key]] = value);
+                },
+            };
+            return reduced;
+        }, {});
+}
+
+/**
+ * Creates an object of references with all the state, getters, and plugin-added
+ * state properties of the store. Similar to `toRefs()` but specifically
+ * designed for Pinia stores so methods and non reactive properties are
+ * completely ignored.
+ *
+ * @param store - store to extract the refs from
+ */
+function storeToRefs(store) {
+    // See https://github.com/vuejs/pinia/issues/852
+    // It's easier to just use toRefs() even if it includes more stuff
+    if (vueDemi.isVue2) {
+        // @ts-expect-error: toRefs include methods and others
+        return vueDemi.toRefs(store);
+    }
+    else {
+        store = vueDemi.toRaw(store);
+        const refs = {};
+        for (const key in store) {
+            const value = store[key];
+            if (vueDemi.isRef(value) || vueDemi.isReactive(value)) {
+                // @ts-expect-error: the key is state or getter
+                refs[key] =
+                    // ---
+                    vueDemi.toRef(store, key);
+            }
+        }
+        return refs;
+    }
+}
+
+/**
+ * Vue 2 Plugin that must be installed for pinia to work. Note **you don't need
+ * this plugin if you are using Nuxt.js**. Use the `buildModule` instead:
+ * https://pinia.vuejs.org/ssr/nuxt.html.
+ *
+ * @example
+ * ```js
+ * import Vue from 'vue'
+ * import { PiniaVuePlugin, createPinia } from 'pinia'
+ *
+ * Vue.use(PiniaVuePlugin)
+ * const pinia = createPinia()
+ *
+ * new Vue({
+ *   el: '#app',
+ *   // ...
+ *   pinia,
+ * })
+ * ```
+ *
+ * @param _Vue - `Vue` imported from 'vue'.
+ */
+const PiniaVuePlugin = function (_Vue) {
+    // Equivalent of
+    // app.config.globalProperties.$pinia = pinia
+    _Vue.mixin({
+        beforeCreate() {
+            const options = this.$options;
+            if (options.pinia) {
+                const pinia = options.pinia;
+                // HACK: taken from provide(): https://github.com/vuejs/composition-api/blob/main/src/apis/inject.ts#L31
+                /* istanbul ignore else */
+                if (!this._provided) {
+                    const provideCache = {};
+                    Object.defineProperty(this, '_provided', {
+                        get: () => provideCache,
+                        set: (v) => Object.assign(provideCache, v),
+                    });
+                }
+                this._provided[piniaSymbol] = pinia;
+                // propagate the pinia instance in an SSR friendly way
+                // avoid adding it to nuxt twice
+                /* istanbul ignore else */
+                if (!this.$pinia) {
+                    this.$pinia = pinia;
+                }
+                pinia._a = this;
+                if (IS_CLIENT) {
+                    // this allows calling useStore() outside of a component setup after
+                    // installing pinia's plugin
+                    setActivePinia(pinia);
+                }
+                if (USE_DEVTOOLS) {
+                    registerPiniaDevtools(pinia._a, pinia);
+                }
+            }
+            else if (!this.$pinia && options.parent && options.parent.$pinia) {
+                this.$pinia = options.parent.$pinia;
+            }
+        },
+        destroyed() {
+            delete this._pStores;
+        },
+    });
+};
+
+exports.PiniaVuePlugin = PiniaVuePlugin;
+exports.acceptHMRUpdate = acceptHMRUpdate;
+exports.createPinia = createPinia;
+exports.defineStore = defineStore;
+exports.getActivePinia = getActivePinia;
+exports.mapActions = mapActions;
+exports.mapGetters = mapGetters;
+exports.mapState = mapState;
+exports.mapStores = mapStores;
+exports.mapWritableState = mapWritableState;
+exports.setActivePinia = setActivePinia;
+exports.setMapStoreSuffix = setMapStoreSuffix;
+exports.skipHydrate = skipHydrate;
+exports.storeToRefs = storeToRefs;
+
+
+/***/ }),
+
+/***/ "./node_modules/pinia/node_modules/vue-demi/lib/index.cjs":
+/*!****************************************************************!*\
+  !*** ./node_modules/pinia/node_modules/vue-demi/lib/index.cjs ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js")
+
+Object.keys(Vue).forEach(function(key) {
+  exports[key] = Vue[key]
+})
+
+exports.set = function(target, key, val) {
+  if (Array.isArray(target)) {
+    target.length = Math.max(target.length, key)
+    target.splice(key, 1, val)
+    return val
+  }
+  target[key] = val
+  return val
+}
+
+exports.del = function(target, key) {
+  if (Array.isArray(target)) {
+    target.splice(key, 1)
+    return
+  }
+  delete target[key]
+}
+
+exports.Vue = Vue
+exports.Vue2 = undefined
+exports.isVue2 = false
+exports.isVue3 = true
+exports.install = function(){}
 
 
 /***/ }),
