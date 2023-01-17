@@ -3,16 +3,16 @@
     <h2 class="photo_title">写真No.000000</h2>
     <div class="photo_wrap">
         <figure class="photo_wrap_img">
-            <!-- <img src="/images/product_imgs/dummy_img_horizontal1.jpg" alt="サンプル画像"> -->
-            <img :src="photo_src" :alt="photo_alt">
+            <img :src="image.src" :alt="image.alt">
         </figure>
         <aside class="photo_wrap_aside">
             <p class="photo_wrap_aside_word">画像サイズ：0000 × 0000px</p>
             <p class="photo_wrap_aside_word">画像形式：JPEG</p>
             <p class="photo_wrap_aside_word">価格：¥0000</p>
-            <p class="photo_wrap_aside_button"><ButtonOrange>カートに追加する</ButtonOrange></p>
+            <p class="photo_wrap_aside_button"><ButtonOrange @click="toCart(image)">カートに追加する</ButtonOrange></p>
             <p ref="term" @click="termOpen" class="photo_wrap_aside_term">利用可能な用途と禁止事項について</p>
         </aside>
+        <!-- <p>カウント:{{ counter.count }}</p> -->
     </div>
     <!-- モーダルでTermで表示 -->
     <Term ref="term" />
@@ -21,9 +21,13 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from "vue";
+import { storeToRefs } from 'pinia';
 import ButtonOrange from "../common/ButtonOrange.vue";
 import Term from "../term.vue";
 import { useRoute, useRouter } from 'vue-router';
+import { cartCounter } from '../../../../store/cart';
+import { galleryImgs } from '../../../../store/gallery';
+
 export default defineComponent({
     name: 'Photo',
     components: {
@@ -36,20 +40,25 @@ export default defineComponent({
         let term = ref();
         const router = useRouter();
         const route = useRoute();
-        const photo_src = route.params.src;
-        const photo_alt = route.params.alt;
+        const image = route.params;
+        const { product_imgs } = storeToRefs(galleryImgs());
+        const { addCart } = cartCounter();
 
         // methods
         const termOpen = () => {
             term.value.openModal(); //子コンポーネント(term)の呼び出し
         }
 
+        const toCart = (image:any) => {
+            addCart(image);
+            router.push( {name: 'cart'} );
+        }
+
         onMounted(() => {
-            console.log('photo_src', photo_src);
-            console.log('photo_alt', photo_alt);
+
         })
 
-        return { term, router, route, photo_src, photo_alt, termOpen }
+        return { term, router, route, image, termOpen, addCart, toCart }
     },
 
 });

@@ -10,8 +10,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { useRouter } from 'vue-router'
+import { defineComponent, ref, onMounted } from "vue";
+import { useRouter } from 'vue-router';
+import { galleryImgs } from '../../../../store/gallery';
+
 export default defineComponent({
     name: 'Gallery',
     components: {
@@ -20,35 +22,7 @@ export default defineComponent({
     setup() {
         //data
         const router = useRouter();
-
-        const images = [
-            //srcのパスは先頭に/がないとPhoto.vueへ遷移後にうまく表示されない
-            { index: 1,
-            src: "/images/product_imgs/dummy_img_horizontal1.jpg",
-            alt: "サンプル画像"
-            },
-            { index: 2,
-            src: "/images/product_imgs/dummy_img_vertical1.jpg",
-            alt: "サンプル画像"
-            },
-            { index: 3,
-            src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-            alt: "サンプル画像"
-            },
-            { index: 1,
-            src: "/images/product_imgs/dummy_img_horizontal2.jpg",
-            alt: "サンプル画像"
-            },
-            { index: 2,
-            src: "/images/product_imgs/dummy_img_vertical2.jpg",
-            alt: "サンプル画像"
-            },
-            { index: 3,
-            src: "/images/product_imgs/dummy_img_horizontal3.jpg",
-            alt: "サンプル画像"
-            },
-        ];
-
+        const images = galleryImgs().product_imgs;
         const selectImg = ref();
 
         // methods
@@ -60,7 +34,11 @@ export default defineComponent({
             // router.push( { name:'photo', params: {index:selectImg.value.index, src:selectImg.value.src, alt:selectImg.value.alt} } );
         };
 
-        return { router, images, selectImg, pushImg };
+        onMounted(() => {
+            console.log('images', images);
+        });
+
+        return { router, images, selectImg, pushImg, onMounted };
     },
 });
 </script>

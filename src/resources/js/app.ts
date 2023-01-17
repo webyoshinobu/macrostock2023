@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import 'normalize.css';
 import router from './router';
 import App from './App.vue';
@@ -12,12 +13,14 @@ import axios from '../../plugins/axios'
 
 library.add(faInstagram);
 
-// createApp(App).mount('#app')
 const app = createApp(App);
+const pinia = createPinia();
+
+app.use(pinia);
 app.use(router, VueAwesomeSwiper);
 app.component('fa', FontAwesomeIcon );
 // app.use(VueAwesomeSwiper, /* { default options with global component } */);
 app.use(axios, {
-    baseUrl: 'https://localhost:80/',
+    baseUrl: 'https://localhost:8000/',
 })
 app.mount("#app")
