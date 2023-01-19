@@ -35,6 +35,10 @@
 
     <!-- <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ mix('js/swiper.js') }}"></script> -->
+
+    <!-- vueでcsrfを使うためのcsrf-token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>MacroStock</title>
 </head>
 <body>

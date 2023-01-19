@@ -9,9 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/swiper-bundle.css';
 import '../css/swiper.css'; //swiper専用スタイル
-import axios from '../../plugins/axios'
+import axios from '../../plugins/axios';
+import bootstrap from './bootstrap';
 
 library.add(faInstagram);
+bootstrap();
 
 const app = createApp(App);
 const pinia = createPinia();
